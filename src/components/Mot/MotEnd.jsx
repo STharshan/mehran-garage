@@ -1,0 +1,51 @@
+import React from 'react';
+
+export default function MotEnd() {
+  const features = [
+    {
+      title: 'Certified Technicians',
+      color: 'text-blue-600',
+      description:
+        'Our MOT testers are fully qualified and regularly updated on the latest testing standards and regulations.',
+    },
+    {
+      title: 'Modern Equipment',
+      color: 'text-red-600',
+      description:
+        'We use the latest MOT testing equipment to ensure accurate and reliable results for your vehicle.',
+    },
+    {
+      title: 'Quick Turnaround',
+      color: 'text-blue-600',
+      description:
+        'Most MOT tests completed within 45 minutes, with immediate results and certificates issued on-site.',
+    },
+    {
+      title: 'Competitive Pricing',
+      color: 'text-red-600',
+      description:
+        "Fair and transparent pricing with no hidden costs. We'll also provide a free basic health check.",
+    },
+  ];
+
+  return (
+    <section className="bg-gradient-to-b from-white via-blue-50 to-rose-50 py-16 px-4">
+      <div className="max-w-7xl mx-auto bg-white rounded-xl shadow-md p-8 md:p-12">
+        <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-10">
+          Why Choose Mehran Garages for MOT?
+        </h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {features.map((feature, index) => (
+            <div key={index}>
+              <h3 className={`text-lg font-semibold mb-2 ${feature.color}`}>
+                {feature.title}
+              </h3>
+              <p className="text-gray-700 text-sm md:text-base">{feature.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
