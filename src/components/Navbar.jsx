@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
+import { FaChevronDown, FaBars } from "react-icons/fa"; // Importing required React Icons
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -8,19 +9,6 @@ const Navbar = () => {
 
   const toggleMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
   const toggleServices = () => setIsServicesVisible(!isServicesVisible); // Toggle service visibility
-
-  // Hide dropdown when clicking outside
-  useEffect(() => {
-    function handleClickOutside(event) {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setIsServicesVisible(false);
-      }
-    }
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
 
   const serviceLinks = [
     { label: "MOT Testing", path: "/services/mot-testing" },
@@ -44,18 +32,15 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-8 text-white items-center relative" ref={dropdownRef}>
+          <Link to="/" className="hover:text-gray-300 text-lg">
+            Home
+          </Link>
           <button onClick={toggleServices} className="hover:text-gray-300 relative text-lg flex items-center">
             Services
             {/* Down Arrow Icon */}
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
+            <FaChevronDown
               className={`h-4 w-4 ml-2 transition-transform duration-200 ${isServicesVisible ? 'transform rotate-180' : ''}`}
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-            </svg>
+            />
           </button>
 
           {isServicesVisible && (
@@ -73,12 +58,12 @@ const Navbar = () => {
             </div>
           )}
 
-          <a href="#about" className="hover:text-gray-300 text-lg">
+          <Link to="/about" className="hover:text-gray-300 text-lg">
             About Us
-          </a>
-          <a href="#contact" className="hover:text-gray-300 text-lg">
+          </Link>
+          <Link to="/contact" className="hover:text-gray-300 text-lg">
             Contact
-          </a>
+          </Link>
         </div>
 
         {/* Contact on desktop */}
@@ -95,15 +80,7 @@ const Navbar = () => {
         {/* Mobile menu icon */}
         <div className="md:hidden flex items-center">
           <button onClick={toggleMenu} className="text-white">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              className="h-6 w-6"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
+            <FaBars className="h-6 w-6" />
           </button>
         </div>
       </div>
@@ -111,57 +88,53 @@ const Navbar = () => {
       {/* Mobile Menu Dropdown */}
       {isMobileMenuOpen && (
         <div className="md:hidden bg-blue-700 text-white p-4">
+          <Link to="/" className="hover:text-gray-300 text-lg">
+            Home
+          </Link>
           {/* Service toggle for mobile */}
           <div className="flex">
-            <a
-              href="#services"
-              className="block py-2"
+            <button
+              className="py-2 text-lg flex items-center"
               onClick={() => setIsServicesVisible(!isServicesVisible)} // Toggle services visibility
             >
               Services
               {/* Down Arrow Icon */}
-            </a>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              className={`h-4 w-4 ml-1 mt-3.5 transition-transform duration-200 ${isServicesVisible ? 'transform rotate-180' : ''}`}
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-            </svg>
+              <FaChevronDown
+                className={`h-4 w-4 ml-1 mt-2.5 transition-transform duration-200 ${isServicesVisible ? 'transform rotate-180' : ''}`}
+              />
+            </button>
           </div>
 
           {/* Display services if visible */}
           {isServicesVisible && (
-            <div className="mt-2">
+            <div className="top-full right-0 mt-2 w-56 bg-white text-black shadow-md rounded-md z-50">
               {serviceLinks.map((service) => (
-                <a
+                <Link
                   key={service.label}
-                  href={service.path}  // Use the service path here
-                  className="block py-2"
-                  onClick={() => setIsMobileMenuOpen(false)} // Close the menu on click
+                  to={service.path}
+                  className="block px-5 py-2 mt-2 hover:bg-gray-200 hover:rounded-lg"
+                  onClick={() => setIsServicesVisible(false)} // Close the menu on click
                 >
                   {service.label}
-                </a>
+                </Link>
               ))}
             </div>
           )}
 
-          <a
-            href="#about"
+          <Link
+            to="/about"
             className="block py-2"
             onClick={() => setIsMobileMenuOpen(false)} // Close the menu
           >
             About Us
-          </a>
-          <a
-            href="#contact"
+          </Link>
+          <Link
+            to="/contact"
             className="block py-2"
             onClick={() => setIsMobileMenuOpen(false)} // Close the menu
           >
             Contact
-          </a>
+          </Link>
 
           <div className="flex items-center space-x-4 mt-4">
             <span>Call Us Today</span>
