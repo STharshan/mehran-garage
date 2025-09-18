@@ -4,7 +4,7 @@ export default function DiagnosticsEnd() {
   return (
     <section className="px-4 py-10 bg-gray-50">
       {/* Section 2: Why Choose Us */}
-      <div className="max-w-7xl mx-auto mt-10 p-8 rounded-xl bg-gradient-to-r from-blue-100 to-red-100 text-center">
+      <div className="max-w-7xl mx-auto mt-10 p-8 rounded-xl bg-gradient-to-r from-blue-100 to-white text-center">
         <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-6">
           Why Choose Our Diagnostics?
         </h2>
@@ -16,7 +16,7 @@ export default function DiagnosticsEnd() {
             </p>
           </div>
           <div>
-            <h3 className="text-red-600 font-semibold mb-2">Expert Technicians</h3>
+            <h3 className="text-blue-600 font-semibold mb-2">Expert Technicians</h3>
             <p className="text-gray-700">
               Our technicians are trained in advanced diagnostics and stay updated with the latest automotive technology
             </p>

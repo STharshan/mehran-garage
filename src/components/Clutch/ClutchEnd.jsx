@@ -12,8 +12,8 @@ export default function ClutchEnd() {
     {
       step: "2",
       title: "Removal",
-      color: "text-red-600",
-      bg: "bg-red-500",
+      color: "text-blue-600",
+      bg: "bg-blue-500",
       desc: "Safe removal of gearbox and clutch components",
     },
     {
@@ -26,8 +26,8 @@ export default function ClutchEnd() {
     {
       step: "4",
       title: "Testing",
-      color: "text-red-600",
-      bg: "bg-red-500",
+      color: "text-blue-600",
+      bg: "bg-blue-500",
       desc: "Road test and clutch operation verification",
     },
   ];
@@ -53,7 +53,7 @@ export default function ClutchEnd() {
       </div>
 
       {/* Clutch Care Tips */}
-      <div className="max-w-7xl mx-auto bg-gradient-to-r from-blue-50 to-rose-50 rounded-xl p-6 md:p-8">
+      <div className="max-w-7xl mx-auto bg-gradient-to-r from-blue-50 to-white rounded-xl p-6 md:p-8">
         <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">
           Clutch Care Tips
         </h2>
@@ -71,7 +71,7 @@ export default function ClutchEnd() {
 
           {/* Maintenance */}
           <div>
-            <h3 className="text-red-600 font-semibold mb-2">Maintenance</h3>
+            <h3 className="text-blue-600 font-semibold mb-2">Maintenance</h3>
             <ul className="list-disc list-inside text-gray-800 space-y-2">
               <li>Check clutch fluid level regularly</li>
               <li>Service clutch hydraulics annually</li>

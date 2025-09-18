@@ -25,8 +25,8 @@ export default function MotEnd() {
   ];
 
   return (
-    <section className="bg-black py-16 px-4">
-      <div className="max-w-7xl mx-auto bg-blue-600 rounded-xl shadow-md p-8 md:p-12">
+    <section className="py-16 px-4">
+      <div className="max-w-7xl mx-auto bg-blue-100 rounded-xl shadow-md p-8 md:p-12">
         <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-10">
           Why Choose Mehran Garages for MOT?
         </h2>
@@ -37,7 +37,7 @@ export default function MotEnd() {
               <h3 className={`text-lg text-black font-semibold mb-2`}>
                 {feature.title}
               </h3>
-              <p className="text-gray-200 text-sm md:text-base">{feature.description}</p>
+              <p className="text-gray-700 text-sm md:text-base">{feature.description}</p>
             </div>
           ))}
         </div>

@@ -28,11 +28,11 @@ function App() {
         <Route path="/services/vehicle-service" element={<Vehicle />} />
         <Route path="services/diagnostics" element={<Diagnostics />} />
         <Route path="services/brake" element={<Brake />} />
+        <Route path="/services/suspension" element={<Suspension />} />
         <Route path="services/air-condition" element={<AirCondition />} />
+        <Route path="/services/tyre-Alignment" element={<Tyre />} />
         <Route path="services/clutch" element={<Clutch />} />
         <Route path="services/timing-system" element={<Timing/>} />
-        <Route path="/services/tyre-Alignment" element={<Tyre />} />
-        <Route path="/services/suspension" element={<Suspension />} />
         <Route path="/services/fleet-management" element={<Fleet />} />
         <Route path="/services/commercial-van" element={<Commercial />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />

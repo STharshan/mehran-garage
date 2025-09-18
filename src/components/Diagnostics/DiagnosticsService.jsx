@@ -5,7 +5,7 @@ import { CiSettings } from "react-icons/ci";
 const services = [
   {
     icon: <Cpu className="w-10 h-10 text-white" />,
-    bg: "bg-gradient-to-tr from-indigo-500 to-pink-500",
+    bg: "bg-gradient-to-r from-blue-800 to-gray-900",
     title: "Engine Diagnostics",
     subtitle: "Comprehensive engine fault finding and analysis",
     items: [
@@ -18,7 +18,7 @@ const services = [
   },
   {
     icon: <Laptop2 className="w-10 h-10 text-white" />,
-    bg: "bg-gradient-to-tr from-pink-500 to-indigo-500",
+    bg: "bg-gradient-to-r from-blue-800 to-gray-900",
     title: "ECU Programming",
     subtitle: "Software updates and ECU reprogramming services",
     items: [
@@ -31,7 +31,7 @@ const services = [
   },
   {
     icon: <Server className="w-10 h-10 text-white" />,
-    bg: "bg-gradient-to-tr from-indigo-500 to-pink-500",
+    bg: "bg-gradient-to-r from-blue-800 to-gray-900",
     title: "Dealer Level Access",
     subtitle: "Professional diagnostic tools with manufacturer access",
     items: [
@@ -44,7 +44,7 @@ const services = [
   },
   {
     icon: <Zap className="w-10 h-10 text-white" />,
-    bg: "bg-gradient-to-tr from-pink-500 to-indigo-500",
+    bg: "bg-gradient-to-r from-blue-800 to-gray-900",
     title: "AdBlue Solutions",
     subtitle: "Advanced AdBlue system fault finding",
     items: [
@@ -57,7 +57,7 @@ const services = [
   },
    {
     icon: <CiSettings className="w-10 h-10 text-white" />,
-    bg: "bg-gradient-to-tr from-pink-500 to-indigo-500",
+    bg: "bg-gradient-to-r from-blue-800 to-gray-900 to-gray-900",
     title: "DPF Solutions",
     subtitle: "Advanced DPF system fault finding",
     items: [
@@ -72,12 +72,12 @@ const services = [
 
 const DiagnosticsServices = () => {
   return (
-    <section className="px-4 py-10 bg-black">
+    <section className="px-4 py-10 ">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
         {services.map((service, index) => (
           <div
             key={index}
-            className="bg-white border border-blue-100 rounded-xl shadow-sm p-6 flex flex-col gap-4 hover:shadow-lg transition"
+            className="bg-white border border-black rounded-xl shadow-sm p-6 flex flex-col gap-4 hover:shadow-lg transition"
           >
             <div className="flex items-center justify-center">
               <div className={`rounded-full p-3 ${service.bg}`}>

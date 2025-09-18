@@ -11,12 +11,12 @@ export default function AirConditonWhyChooseUs() {
     {
       title: 'Expert Technicians',
       description: 'Certified mechanics delivering precise and high-quality service.',
-      icon: <Wrench className="w-10 h-10 text-red-500" />,
+      icon: <Wrench className="w-10 h-10 text-blue-500" />,
     },
     {
       title: 'Customer-Centric',
       description: 'We care about your satisfaction and aim to exceed expectations.',
-      icon: <Users className="w-10 h-10 text-green-600" />,
+      icon: <Users className="w-10 h-10 text-blue-600" />,
     },
   ];
 

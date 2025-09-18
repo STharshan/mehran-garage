@@ -19,12 +19,12 @@ export default function TyreEnd() {
               "Improved fuel economy",
               "Extended tyre life",
               "Better vehicle handling",
-              "Reduced steering effort",
+              "reduced steering effort",
               "Safer driving experience",
               "Prevents premature wear",
             ].map((item, i) => (
               <li key={i} className="flex items-start gap-2">
-                <CheckCircle className="w-4 h-4 text-green-500 mt-0.5" />
+                <CheckCircle className="w-4 h-4 text-blue-500 mt-0.5" />
                 <span>{item}</span>
               </li>
             ))}
@@ -32,10 +32,10 @@ export default function TyreEnd() {
         </div>
 
         {/* Tyre Health Checks */}
-        <div className="border border-red-300 bg-red-50 rounded-xl p-6">
+        <div className="border border-blue-300 bg-blue-50 rounded-xl p-6">
           <div className="flex items-center gap-2 mb-4">
-            <CircleSlash className="w-5 h-5 text-red-600" />
-            <h3 className="text-red-700 font-semibold text-lg">
+            <CircleSlash className="w-5 h-5 text-blue-600" />
+            <h3 className="text-blue-700 font-semibold text-lg">
               Tyre Health Checks
             </h3>
           </div>
@@ -49,7 +49,7 @@ export default function TyreEnd() {
               "Legal compliance check",
             ].map((item, i) => (
               <li key={i} className="flex items-start gap-2">
-                <CheckCircle className="w-4 h-4 text-green-500 mt-0.5" />
+                <CheckCircle className="w-4 h-4 text-blue-500 mt-0.5" />
                 <span>{item}</span>
               </li>
             ))}
@@ -58,7 +58,7 @@ export default function TyreEnd() {
       </div>
 
       {/* Tyre Brands */}
-      <div className="max-w-7xl mx-auto bg-gradient-to-r from-blue-100 to-red-100 rounded-xl p-6 md:p-10 text-center">
+      <div className="max-w-7xl mx-auto bg-gradient-to-r from-blue-100 to-blue-100 rounded-xl p-6 md:p-10 text-center">
         <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8">
           Tyre Brand We Offer
         </h2>
@@ -73,7 +73,7 @@ export default function TyreEnd() {
             </ul>
           </div>
           <div>
-            <h3 className="text-red-600 font-semibold mb-2">Mid-Range</h3>
+            <h3 className="text-blue-600 font-semibold mb-2">Mid-Range</h3>
             <ul className="space-y-1">
               <li>Goodyear</li>
               <li>Davanti</li>
@@ -91,7 +91,7 @@ export default function TyreEnd() {
             </ul>
           </div>
           <div>
-            <h3 className="text-red-600 font-semibold mb-2">Specialist</h3>
+            <h3 className="text-blue-600 font-semibold mb-2">Specialist</h3>
             <ul className="space-y-1">
               <li>Run-flat tyres</li>
               <li>Winter tyres</li>

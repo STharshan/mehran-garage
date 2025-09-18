@@ -18,7 +18,7 @@ const Footer = () => {
             {/* Socials */}
             <div className="mt-4 flex space-x-4">
               <a
-                href="https://www.facebook.com/S.LValetingDetailingServices/"
+                href=""
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white dark:text-gray-300 hover:text-blue-600 dark:hover:text-gray-200"
@@ -27,7 +27,7 @@ const Footer = () => {
                 <FaFacebook size={24} />
               </a>
               <a
-                href="https://www.instagram.com/sl_smart_repair/?hl=en"
+                href=""
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white dark:text-gray-300 hover:text-pink-600 dark:hover:text-gray-200"
@@ -104,7 +104,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-12 border-t border-gray-300 dark:border-neutral-800 pt-8 text-center text-gray-500 dark:text-gray-400">
+        <div className="mt-12 border-t border-gray-300 dark:border-neutral-800 pt-8 text-center text-gray-200 dark:text-gray-400">
           © {new Date().getFullYear()} Mehran Garages. All rights reserved.
           <span className="mx-1">|</span>
           Powered by{" "}
@@ -112,7 +112,7 @@ const Footer = () => {
             href="https://www.ansely.co.uk/"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-semibold hover:underline text-blue-600"
+            className="font-semibold hover:underline text-black"
           >
             Ansely
           </a>

@@ -19,10 +19,10 @@ export default function TyreServices() {
       <div className="flex flex-wrap justify-center gap-3 mb-10">
         {[
           { label: "Engine Diagnostics", color: "bg-blue-100 text-blue-600" },
-          { label: "Brake Repair", color: "bg-red-100 text-red-600" },
-          { label: "Oil Change", color: "bg-green-100 text-green-600" },
-          { label: "Air Conditioning", color: "bg-yellow-100 text-yellow-600" },
-          { label: "MOT Testing", color: "bg-purple-100 text-purple-600" },
+          { label: "Brake Repair", color: "bg-blue-100 text-blue-600" },
+          { label: "Oil Change", color: "bg-blue-100 text-blue-600" },
+          { label: "Air Conditioning", color: "bg-blue-100 text-blue-600" },
+          { label: "MOT Testing", color: "bg-blue-100 text-blue-600" },
         ].map((tag, index) => (
           <span
             key={index}
@@ -38,7 +38,7 @@ export default function TyreServices() {
         {/* Card 1 */}
         <div className="bg-white border rounded-xl p-6 shadow-sm hover:shadow-md transition">
           <div className="flex justify-center mb-4">
-            <div className="p-3 bg-gradient-to-tr from-pink-500 to-red-500 rounded-full">
+            <div className="p-3 bg-gradient-to-r from-blue-800 to-gray-900 rounded-full">
               <CircleDot className="w-8 h-8 text-white" />
             </div>
           </div>
@@ -57,7 +57,7 @@ export default function TyreServices() {
               "Wheel balancing",
             ].map((item, i) => (
               <li key={i} className="flex items-start gap-2">
-                <CheckCircle className="w-4 h-4 text-green-500 mt-0.5" />
+                <CheckCircle className="w-4 h-4 text-blue-500 mt-0.5" />
                 <span>{item}</span>
               </li>
             ))}
@@ -67,7 +67,7 @@ export default function TyreServices() {
         {/* Card 2 */}
         <div className="bg-white border rounded-xl p-6 shadow-sm hover:shadow-md transition">
           <div className="flex justify-center mb-4">
-            <div className="p-3 bg-gradient-to-tr from-purple-500 to-red-500 rounded-full">
+            <div className="p-3 bg-gradient-to-r from-blue-800 to-gray-900 rounded-full">
               <Radar className="w-8 h-8 text-white" />
             </div>
           </div>
@@ -86,7 +86,7 @@ export default function TyreServices() {
               "Alignment reports",
             ].map((item, i) => (
               <li key={i} className="flex items-start gap-2">
-                <CheckCircle className="w-4 h-4 text-green-500 mt-0.5" />
+                <CheckCircle className="w-4 h-4 text-blue-500 mt-0.5" />
                 <span>{item}</span>
               </li>
             ))}
@@ -96,7 +96,7 @@ export default function TyreServices() {
         {/* Card 3 */}
         <div className="bg-white border rounded-xl p-6 shadow-sm hover:shadow-md transition">
           <div className="flex justify-center mb-4">
-            <div className="p-3 bg-gradient-to-tr from-blue-500 to-pink-500 rounded-full">
+            <div className="p-3 bg-gradient-to-r from-blue-800 to-gray-900 rounded-full">
               <Settings className="w-8 h-8 text-white" />
             </div>
           </div>
@@ -115,7 +115,7 @@ export default function TyreServices() {
               "Custom wheel fitting",
             ].map((item, i) => (
               <li key={i} className="flex items-start gap-2">
-                <CheckCircle className="w-4 h-4 text-green-500 mt-0.5" />
+                <CheckCircle className="w-4 h-4 text-blue-500 mt-0.5" />
                 <span>{item}</span>
               </li>
             ))}
@@ -144,7 +144,7 @@ export default function TyreServices() {
 
           {/* Right: Parameters */}
           <div>
-            <h3 className="text-red-600 font-semibold mb-3">Alignment Parameters</h3>
+            <h3 className="text-blue-600 font-semibold mb-3">Alignment Parameters</h3>
             <ul className="list-disc list-inside space-y-2 text-gray-700">
               <li>Toe angle adjustment</li>
               <li>Camber angle correction</li>

@@ -13,10 +13,10 @@ const ClutchServices = () => {
       <div className="flex flex-wrap justify-center gap-3 mb-10">
         {[
           { label: "Engine Diagnostics", color: "bg-blue-100 text-blue-600" },
-          { label: "Brake Repair", color: "bg-red-100 text-red-600" },
-          { label: "Oil Change", color: "bg-green-100 text-green-600" },
-          { label: "Air Conditioning", color: "bg-yellow-100 text-yellow-600" },
-          { label: "MOT Testing", color: "bg-purple-100 text-purple-600" },
+          { label: "Brake Repair", color: "bg-blue-100 text-blue-600" },
+          { label: "Oil Change", color: "bg-blue-100 text-blue-600" },
+          { label: "Air Conditioning", color: "bg-blue-100 text-blue-600" },
+          { label: "MOT Testing", color: "bg-blue-100 text-blue-600" },
         ].map((tag, idx) => (
           <span key={idx} className={`px-4 py-1 text-sm font-medium rounded-full ${tag.color}`}>
             {tag.label}
@@ -29,7 +29,7 @@ const ClutchServices = () => {
         {/* Clutch Replacement */}
         <div className="bg-white border rounded-xl p-6 shadow hover:shadow-md transition">
           <div className="flex justify-center mb-4">
-            <div className="p-3 bg-gradient-to-tr from-pink-500 to-red-500 rounded-full">
+            <div className="p-3 bg-gradient-to-r from-blue-800 to-gray-900 rounded-full">
               <CircleDashed className="w-8 h-8 text-white" />
             </div>
           </div>
@@ -48,7 +48,7 @@ const ClutchServices = () => {
               "Clutch hydraulics service",
             ].map((item, i) => (
               <li key={i} className="flex items-start gap-2">
-                <CheckCircle className="w-4 h-4 text-green-500 mt-0.5" />
+                <CheckCircle className="w-4 h-4 text-blue-500 mt-0.5" />
                 <span>{item}</span>
               </li>
             ))}
@@ -58,7 +58,7 @@ const ClutchServices = () => {
         {/* Clutch Diagnostics */}
         <div className="bg-white border rounded-xl p-6 shadow hover:shadow-md transition">
           <div className="flex justify-center mb-4">
-            <div className="p-3 bg-gradient-to-tr from-red-500 to-purple-500 rounded-full">
+            <div className="p-3 bg-gradient-to-r from-blue-800 to-gray-900 rounded-full">
               <Settings2 className="w-8 h-8 text-white" />
             </div>
           </div>
@@ -77,7 +77,7 @@ const ClutchServices = () => {
               "Flywheel condition assessment",
             ].map((item, i) => (
               <li key={i} className="flex items-start gap-2">
-                <CheckCircle className="w-4 h-4 text-green-500 mt-0.5" />
+                <CheckCircle className="w-4 h-4 text-blue-500 mt-0.5" />
                 <span>{item}</span>
               </li>
             ))}
@@ -87,7 +87,7 @@ const ClutchServices = () => {
         {/* Hydraulic Systems */}
         <div className="bg-white border rounded-xl p-6 shadow hover:shadow-md transition">
           <div className="flex justify-center mb-4">
-            <div className="p-3 bg-gradient-to-tr from-blue-500 to-pink-500 rounded-full">
+            <div className="p-3 bg-gradient-to-r from-blue-800 to-gray-900 rounded-full">
               <Wrench className="w-8 h-8 text-white" />
             </div>
           </div>
@@ -106,7 +106,7 @@ const ClutchServices = () => {
               "Leak detection and repair",
             ].map((item, i) => (
               <li key={i} className="flex items-start gap-2">
-                <CheckCircle className="w-4 h-4 text-green-500 mt-0.5" />
+                <CheckCircle className="w-4 h-4 text-blue-500 mt-0.5" />
                 <span>{item}</span>
               </li>
             ))}
@@ -115,15 +115,15 @@ const ClutchServices = () => {
       </div>
 
       {/* Clutch Problem Signs */}
-      <div className="max-w-7xl mx-auto bg-yellow-50 border border-yellow-300 rounded-xl p-6 md:p-8">
+      <div className="max-w-7xl mx-auto bg-blue-50 border border-blue-300 rounded-xl p-6 md:p-8">
         <div className="flex items-center gap-2 mb-4">
-          <AlertTriangle className="w-5 h-5 text-yellow-600" />
-          <h3 className="text-lg font-semibold text-yellow-700">Clutch Problem Signs</h3>
+          <AlertTriangle className="w-5 h-5 text-blue-600" />
+          <h3 className="text-lg font-semibold text-blue-700">Clutch Problem Signs</h3>
         </div>
         <p className="text-sm text-gray-700 mb-6">
           Don’t ignore these warning signs – clutch problems can lead to expensive transmission damage:
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-yellow-900">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-blue-900">
           {[
             "Clutch pedal feels heavy or light",
             "Clutch slipping under acceleration",
@@ -135,7 +135,7 @@ const ClutchServices = () => {
             "High clutch biting point",
           ].map((sign, i) => (
             <div key={i} className="flex items-start gap-2">
-              <AlertTriangle className="w-4 h-4 mt-0.5 text-yellow-500" />
+              <AlertTriangle className="w-4 h-4 mt-0.5 text-blue-500" />
               <span>{sign}</span>
             </div>
           ))}

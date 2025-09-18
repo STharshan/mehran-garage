@@ -19,10 +19,10 @@ export default function BrakeEnd() {
             },
             {
               number: "2",
-              color: "bg-red-500",
+              color: "bg-blue-500",
               title: "Diagnosis",
               text: "Identify worn components and system issues",
-              titleColor: "text-red-500",
+              titleColor: "text-blue-500",
             },
             {
               number: "3",
@@ -33,10 +33,10 @@ export default function BrakeEnd() {
             },
             {
               number: "4",
-              color: "bg-red-500",
+              color: "bg-blue-500",
               title: "Testing",
               text: "Road test and brake performance verification",
-              titleColor: "text-red-500",
+              titleColor: "text-blue-500",
             },
           ].map((step, index) => (
             <div key={index} className="flex flex-col items-center gap-2">
@@ -51,7 +51,7 @@ export default function BrakeEnd() {
       </div>
 
       {/* Brake Maintenance Tips */}
-      <div className="max-w-7xl mx-auto bg-gradient-to-r from-blue-100 to-red-100 rounded-xl p-6 md:p-10">
+      <div className="max-w-7xl mx-auto bg-gradient-to-r from-blue-100 to-blue-100 rounded-xl p-6 md:p-10">
         <h2 className="text-center text-2xl md:text-3xl font-bold text-gray-900 mb-8">
           Brake Maintenance Tips
         </h2>
@@ -69,7 +69,7 @@ export default function BrakeEnd() {
 
           {/* Driving Tips */}
           <div>
-            <h3 className="text-red-600 font-semibold mb-3">Driving Tips</h3>
+            <h3 className="text-blue-600 font-semibold mb-3">Driving Tips</h3>
             <ul className="list-disc list-inside space-y-2 text-gray-700">
               <li>Avoid harsh braking when possible</li>
               <li>Allow brakes to cool on long descents</li>

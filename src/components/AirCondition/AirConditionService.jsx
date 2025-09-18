@@ -11,8 +11,8 @@ export default function AirConditonServices() {
         {/* Tag Filters */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           <span className="px-4 py-2 rounded-full bg-blue-100 text-blue-700 font-medium">Engine Diagnostics</span>
-          <span className="px-4 py-2 rounded-full bg-red-100 text-red-600 font-medium">Brake Repair</span>
-          <span className="px-4 py-2 rounded-full bg-green-100 text-green-700 font-medium">Oil Change</span>
+          <span className="px-4 py-2 rounded-full bg-blue-100 text-blue-600 font-medium">Brake Repair</span>
+          <span className="px-4 py-2 rounded-full bg-blue-100 text-blue-700 font-medium">Oil Change</span>
           <span className="px-4 py-2 rounded-full bg-yellow-100 text-yellow-700 font-medium">Air Conditioning</span>
           <span className="px-4 py-2 rounded-full bg-purple-100 text-purple-700 font-medium">MOT Testing</span>
         </div>
@@ -22,7 +22,7 @@ export default function AirConditonServices() {
           {/* Class 4 MOT */}
           <div className="bg-white rounded-xl shadow-sm border p-8 text-left hover:shadow-md transition-all">
             <div className="flex flex-col items-center mb-6">
-              <div className="w-14 h-14 rounded-full bg-gradient-to-r from-blue-500 to-red-500 flex items-center justify-center mb-3">
+              <div className="w-14 h-14 rounded-full bg-gradient-to-r from-blue-800 to-gray-900 flex items-center justify-center mb-3">
                 <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path d="M3 10h14l1-2h2a1 1 0 0 1 1 1v2h-1l-1 2h-1.5M3 10v4a2 2 0 0 0 2 2h1.5M10 14v2m-2 0h4" />
                 </svg>
@@ -42,7 +42,7 @@ export default function AirConditonServices() {
                 'Bodywork and structure inspection'
               ].map((item, index) => (
                 <li key={index} className="flex items-start text-sm text-gray-700">
-                  <CheckCircle className="text-green-500 w-5 h-5 mr-2 mt-0.5" />
+                  <CheckCircle className="text-blue-500 w-5 h-5 mr-2 mt-0.5" />
                   {item}
                 </li>
               ))}
@@ -52,7 +52,7 @@ export default function AirConditonServices() {
           {/* Class 7 MOT */}
           <div className="bg-white rounded-xl shadow-sm border p-8 text-left hover:shadow-md transition-all">
             <div className="flex flex-col items-center mb-6">
-              <div className="w-14 h-14 rounded-full bg-gradient-to-r from-blue-500 to-red-500 flex items-center justify-center mb-3">
+              <div className="w-14 h-14 rounded-full bg-gradient-to-r from-blue-800 to-gray-900 flex items-center justify-center mb-3">
                 <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path d="M2 12h18M2 16h18M4 6h16l2 6H2l2-6z" />
                 </svg>
@@ -72,7 +72,7 @@ export default function AirConditonServices() {
                 'Commercial vehicle emissions'
               ].map((item, index) => (
                 <li key={index} className="flex items-start text-sm text-gray-700">
-                  <CheckCircle className="text-green-500 w-5 h-5 mr-2 mt-0.5" />
+                  <CheckCircle className="text-blue-500 w-5 h-5 mr-2 mt-0.5" />
                   {item}
                 </li>
               ))}

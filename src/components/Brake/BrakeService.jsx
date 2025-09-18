@@ -19,10 +19,10 @@ const BrakeServices = () => {
       <div className="flex flex-wrap justify-center gap-3 mb-10">
         {[
           { text: "Engine Diagnostics", color: "bg-blue-100 text-blue-600" },
-          { text: "Brake Repair", color: "bg-red-100 text-red-600" },
-          { text: "Oil Change", color: "bg-green-100 text-green-600" },
-          { text: "Air Conditioning", color: "bg-yellow-100 text-yellow-600" },
-          { text: "MOT Testing", color: "bg-purple-100 text-purple-600" },
+          { text: "Brake Repair", color: "bg-blue-100 text-blue-600" },
+          { text: "Oil Change", color: "bg-blue-100 text-blue-600" },
+          { text: "Air Conditioning", color: "bg-blue-100 text-blue-600" },
+          { text: "MOT Testing", color: "bg-blue-100 text-blue-600" },
         ].map((tag, index) => (
           <span
             key={index}
@@ -38,7 +38,7 @@ const BrakeServices = () => {
         {/* Card 1 */}
         <div className="bg-white border rounded-xl p-6 shadow-sm hover:shadow-md transition">
           <div className="flex justify-center mb-4">
-            <div className="p-3 bg-gradient-to-tr from-blue-500 to-pink-500 rounded-full">
+            <div className="p-3 bg-gradient-to-r from-blue-800 to-gray-900 rounded-full">
               <SquareCode className="w-8 h-8 text-white" />
             </div>
           </div>
@@ -57,7 +57,7 @@ const BrakeServices = () => {
               "Brake pad wear sensors",
             ].map((item, i) => (
               <li key={i} className="flex items-start gap-2">
-                <CheckCircle className="text-green-500 w-4 h-4 mt-0.5" />
+                <CheckCircle className="text-blue-500 w-4 h-4 mt-0.5" />
                 <span>{item}</span>
               </li>
             ))}
@@ -67,7 +67,7 @@ const BrakeServices = () => {
         {/* Card 2 */}
         <div className="bg-white border rounded-xl p-6 shadow-sm hover:shadow-md transition">
           <div className="flex justify-center mb-4">
-            <div className="p-3 bg-gradient-to-tr from-pink-500 to-purple-500 rounded-full">
+            <div className="p-3 bg-gradient-to-r from-blue-800 to-gray-900 rounded-full">
               <Wrench className="w-8 h-8 text-white" />
             </div>
           </div>
@@ -86,7 +86,7 @@ const BrakeServices = () => {
               "Brake servo testing",
             ].map((item, i) => (
               <li key={i} className="flex items-start gap-2">
-                <CheckCircle className="text-green-500 w-4 h-4 mt-0.5" />
+                <CheckCircle className="text-blue-500 w-4 h-4 mt-0.5" />
                 <span>{item}</span>
               </li>
             ))}
@@ -96,7 +96,7 @@ const BrakeServices = () => {
         {/* Card 3 */}
         <div className="bg-white border rounded-xl p-6 shadow-sm hover:shadow-md transition">
           <div className="flex justify-center mb-4">
-            <div className="p-3 bg-gradient-to-tr from-purple-500 to-blue-500 rounded-full">
+            <div className="p-3 bg-gradient-to-r from-blue-800 to-gray-900 rounded-full">
               <Shield className="w-8 h-8 text-white" />
             </div>
           </div>
@@ -115,7 +115,7 @@ const BrakeServices = () => {
               "Brake sensor replacement",
             ].map((item, i) => (
               <li key={i} className="flex items-start gap-2">
-                <CheckCircle className="text-green-500 w-4 h-4 mt-0.5" />
+                <CheckCircle className="text-blue-500 w-4 h-4 mt-0.5" />
                 <span>{item}</span>
               </li>
             ))}
@@ -124,17 +124,17 @@ const BrakeServices = () => {
       </div>
 
       {/* Brake Warning Signs */}
-      <div className="max-w-7xl mx-auto mt-10 p-6 border border-red-200 bg-red-50 rounded-xl">
+      <div className="max-w-7xl mx-auto mt-10 p-6 border border-blue-200 bg-blue-50 rounded-xl">
         <div className="flex items-center gap-2 mb-4">
-          <AlertTriangle className="text-red-600 w-6 h-6" />
-          <h3 className="text-lg font-semibold text-red-700">
+          <AlertTriangle className="text-blue-600 w-6 h-6" />
+          <h3 className="text-lg font-semibold text-blue-700">
             Brake Warning Signs
           </h3>
         </div>
         <p className="text-sm text-gray-700 mb-6">
           Don’t ignore these warning signs - your safety depends on properly functioning brakes:
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-red-700">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-blue-700">
           {[
             "Squealing or grinding noises when braking",
             "Vehicle pulls to one side when braking",
@@ -144,7 +144,7 @@ const BrakeServices = () => {
             "Longer stopping distances than normal",
           ].map((warning, i) => (
             <div key={i} className="flex items-start gap-2">
-              <AlertTriangle className="w-4 h-4 mt-0.5 text-red-500" />
+              <AlertTriangle className="w-4 h-4 mt-0.5 text-blue-500" />
               <span>{warning}</span>
             </div>
           ))}

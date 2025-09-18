@@ -34,7 +34,7 @@ export default function TimingEnd() {
       </div>
 
       {/* Why Choose Section */}
-      <div className="max-w-7xl mx-auto mt-10 rounded-lg shadow-inner p-6 bg-gradient-to-r from-blue-50 via-white to-red-50">
+      <div className="max-w-7xl mx-auto mt-10 rounded-lg shadow-inner p-6 bg-gradient-to-r from-blue-50 via-white to-blue-50">
         <h2 className="text-xl md:text-2xl font-bold text-center text-gray-800 mb-6">
           Why Choose Mehran Garages?
         </h2>
@@ -47,7 +47,7 @@ export default function TimingEnd() {
             </p>
           </div>
           <div>
-            <h3 className="font-semibold text-red-600 mb-1">Quality Parts</h3>
+            <h3 className="font-semibold text-blue-600 mb-1">Quality Parts</h3>
             <p className="text-gray-700">
               We use OEM or equivalent quality timing components with comprehensive warranties
             </p>

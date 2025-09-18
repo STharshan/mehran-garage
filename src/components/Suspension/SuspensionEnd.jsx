@@ -24,7 +24,7 @@ export default function SuspensionEnd() {
 
           {/* Rear Suspension */}
           <div>
-            <h3 className="text-red-600 font-semibold mb-3">Rear Suspension</h3>
+            <h3 className="text-blue-600 font-semibold mb-3">Rear Suspension</h3>
             <ul className="list-disc list-inside space-y-2 text-gray-700">
               <li>Rear shock absorbers or struts</li>
               <li>Coil springs or leaf springs</li>
@@ -38,7 +38,7 @@ export default function SuspensionEnd() {
       </div>
 
       {/* Suspension Maintenance */}
-      <div className="max-w-7xl mx-auto bg-gradient-to-r from-blue-100 to-red-100 rounded-xl p-6 md:p-10 text-center">
+      <div className="max-w-7xl mx-auto bg-gradient-to-r from-blue-100 to-white rounded-xl p-6 md:p-10 text-center">
         <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8">
           Suspension Maintenance
         </h2>
@@ -50,7 +50,7 @@ export default function SuspensionEnd() {
             </p>
           </div>
           <div>
-            <h3 className="text-red-600 font-semibold mb-2">Quality Parts</h3>
+            <h3 className="text-blue-600 font-semibold mb-2">Quality Parts</h3>
             <p className="text-gray-700">
               We use OEM or equivalent quality suspension components for reliable, long-lasting repairs
             </p>

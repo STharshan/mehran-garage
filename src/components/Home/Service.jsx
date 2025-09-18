@@ -86,7 +86,7 @@ export default function ServicesCarousel() {
   };
 
   return (
-    <div className="w-full px-4 py-18 bg-black">
+    <div className="w-full px-4 py-18">
       <h2 className="text-3xl font-bold text-blue-600 text-center mb-8">Our Services</h2>
 
       <div className="relative">
