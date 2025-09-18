@@ -108,13 +108,13 @@ export default function ServicesCarousel() {
               key={index}
               className="min-w-[280px] h-[280px] max-w-sm bg-white rounded-lg p-6 shadow-md flex-shrink-0 text-center border hover:shadow-lg transition flex flex-col"
             >
-              <div className="w-16 h-16 flex items-center justify-center mx-auto bg-gradient-to-r from-blue-500 to-red-500 rounded-full mb-4">
+              <div className="w-16 h-16 flex items-center justify-center mx-auto bg-gradient-to-r from-gray-900  to-blue-800 rounded-full mb-4">
                 {service.icon}
               </div>
               <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
               <p className="text-sm text-gray-600 mb-1">{service.subtitle}</p>
               <p className="text-sm text-gray-500 flex-grow">{service.description}</p>
-              <button className="mt-4 bg-gradient-to-r from-blue-500 to-red-500 text-white px-2 w-50 mx-auto py-2 rounded hover:opacity-90 text-sm">
+              <button className="mt-4 bg-gradient-to-r from-gray-900  to-blue-800 text-white px-2 w-50 mx-auto py-2 rounded hover:opacity-90 text-sm">
                 Learn More
               </button>
             </div>
