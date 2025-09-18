@@ -1,7 +1,8 @@
 import React, { useRef } from 'react';
-import { FaChevronLeft, FaChevronRight, FaCar, FaWrench, FaTools, FaCarSide, FaRegSnowflake, FaRegClock } from 'react-icons/fa';
+import { FaChevronLeft, FaChevronRight, FaCarSide, FaRegSnowflake, FaRegClock, FaShuttleVan } from 'react-icons/fa';
 import { IoSettingsOutline, IoSpeedometerOutline } from 'react-icons/io5';
 import { LuBrackets, LuCog, LuShipWheel, LuWrench } from 'react-icons/lu';
+import { MdManageAccounts } from 'react-icons/md';
 
 const services = [
   {
@@ -22,41 +23,53 @@ const services = [
     description: "ECU updates and dealer-level diagnostic information",
     icon: <IoSettingsOutline className="text-2xl text-white" />
   },
-    {
+  {
     title: "Braking Systems",
     subtitle: "Complete brake repair and maintenance services",
     description: "Brake pads, discs, fluid changes and brake system repairs",
     icon: <LuBrackets className="text-2xl text-white" />
   },
-    {
+  {
     title: "Suspension",
     subtitle: "Suspension repair and replacement services",
     description: "Shock absorbers, springs, and complete suspension systems",
     icon: <IoSpeedometerOutline className="text-2xl text-white" />
   },
-    {
+  {
     title: "Air Conditioning",
     subtitle: "AC repair, servicing and re-gassing",
     description: "Keep cool with our professional AC services",
     icon: <FaRegSnowflake className="text-2xl text-white" />
   },
-    {
+  {
     title: "Tyres & Alignment",
     subtitle: "High-tech wheel alignment and tyre services",
     description: "Premium tyres and precision wheel alignment technology",
     icon: <LuShipWheel className="text-2xl text-white" />
   },
-      {
+  {
     title: "Clutch Repair",
     subtitle: "Complete clutch repair and replacement",
     description: "Expert clutch repairs for all vehicle types",
     icon: <LuCog className="text-2xl text-white" />
   },
-      {
+  {
     title: "Timing Systems",
     subtitle: "Timing belts, wet belts, and timing chains",
     description: "Precision timing system repairs and replacements",
     icon: <FaRegClock className="text-2xl text-white" />
+  },
+  {
+    title: "Fleet Management",
+    subtitle: "Timing belts, wet belts, and timing chains",
+    description: "Precision timing system repairs and replacements",
+    icon: <MdManageAccounts className="text-2xl text-white" />
+  },
+  {
+    title: "Commercial Van",
+    subtitle: "Timing belts, wet belts, and timing chains",
+    description: "Precision timing system repairs and replacements",
+    icon: <FaShuttleVan className="text-2xl text-white" />
   },
 ];
 
@@ -73,8 +86,8 @@ export default function ServicesCarousel() {
   };
 
   return (
-    <div className="w-full px-4 py-10 bg-gray-50">
-      <h2 className="text-3xl font-bold text-center mb-8">Our Services</h2>
+    <div className="w-full px-4 py-18 bg-black">
+      <h2 className="text-3xl font-bold text-blue-600 text-center mb-8">Our Services</h2>
 
       <div className="relative">
         {/* Left Arrow */}
@@ -93,15 +106,15 @@ export default function ServicesCarousel() {
           {services.map((service, index) => (
             <div
               key={index}
-              className="min-w-[280px] scroll- max-w-sm bg-white rounded-lg p-6 shadow-md flex-shrink-0 text-center border hover:shadow-lg transition"
+              className="min-w-[280px] h-[280px] max-w-sm bg-white rounded-lg p-6 shadow-md flex-shrink-0 text-center border hover:shadow-lg transition flex flex-col"
             >
               <div className="w-16 h-16 flex items-center justify-center mx-auto bg-gradient-to-r from-blue-500 to-red-500 rounded-full mb-4">
                 {service.icon}
               </div>
               <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
               <p className="text-sm text-gray-600 mb-1">{service.subtitle}</p>
-              <p className="text-sm text-gray-500">{service.description}</p>
-              <button className="mt-4 bg-gradient-to-r from-blue-500 to-red-500 text-white px-4 py-2 rounded hover:opacity-90 text-sm">
+              <p className="text-sm text-gray-500 flex-grow">{service.description}</p>
+              <button className="mt-4 bg-gradient-to-r from-blue-500 to-red-500 text-white px-2 w-50 mx-auto py-2 rounded hover:opacity-90 text-sm">
                 Learn More
               </button>
             </div>

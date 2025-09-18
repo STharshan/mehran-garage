@@ -2,7 +2,7 @@ import React from "react";
 
 const HeroSection = () => {
   return (
-    <div className="relative w-full h-screen overflow-hidden">
+    <div className="relative w-full bg-black">
       {/* Background Video */}
       <video
         className="object-cover w-full h-full"

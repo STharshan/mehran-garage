@@ -1,5 +1,6 @@
 import React from "react";
 import { CheckCircle, Cpu, Laptop2, Server, Zap } from "lucide-react";
+import { CiSettings } from "react-icons/ci";
 
 const services = [
   {
@@ -44,21 +45,34 @@ const services = [
   {
     icon: <Zap className="w-10 h-10 text-white" />,
     bg: "bg-gradient-to-tr from-pink-500 to-indigo-500",
-    title: "Electrical Diagnostics",
-    subtitle: "Advanced electrical system fault finding",
+    title: "AdBlue Solutions",
+    subtitle: "Advanced AdBlue system fault finding",
     items: [
-      "Circuit testing and analysis",
-      "Component functionality testing",
-      "Wiring harness inspection",
-      "Sensor calibration",
-      "Network communication testing",
+      "AdBlue injector testing and analysis",
+      "Pump and dosing module functionality testing",
+      "Wiring harness inspection and repair",
+      "NOx and level sensor calibration",
+      "SCR system communication testing",
+    ],
+  },
+   {
+    icon: <CiSettings className="w-10 h-10 text-white" />,
+    bg: "bg-gradient-to-tr from-pink-500 to-indigo-500",
+    title: "DPF Solutions",
+    subtitle: "Advanced DPF system fault finding",
+    items: [
+      "DPF pressure sensor testing and analysis",
+      "Exhaust temperature sensor functionality testing",
+      "DPF blockage inspection and assessment",
+      "Regeneration system calibration",
+      "Emissions system communication testing",
     ],
   },
 ];
 
 const DiagnosticsServices = () => {
   return (
-    <section className="px-4 py-10 bg-gray-50">
+    <section className="px-4 py-10 bg-black">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
         {services.map((service, index) => (
           <div
@@ -79,7 +93,7 @@ const DiagnosticsServices = () => {
             <ul className="mt-2 space-y-2 text-sm text-gray-700">
               {service.items.map((item, i) => (
                 <li key={i} className="flex items-start gap-2">
-                  <CheckCircle className="w-5 h-5 text-green-500 mt-0.5" />
+                  <CheckCircle className="w-5 h-5 text-blue-500 mt-0.5" />
                   <span>{item}</span>
                 </li>
               ))}

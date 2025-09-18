@@ -3,10 +3,10 @@ import { CheckCircle } from 'lucide-react'; // or use your preferred icon librar
 
 export default function VehicleServices() {
   return (
-    <section className="bg-gradient-to-b from-white via-blue-50 to-rose-50 py-16 px-4">
+    <section className="bg-black py-16 px-4">
       <div className="max-w-7xl mx-auto text-center">
         {/* Title */}
-        <h2 className="text-3xl font-bold text-gray-900 mb-8">Our Services</h2>
+        <h2 className="text-3xl font-bold text-blue-600 mb-8">Our Services</h2>
 
         {/* Tag Filters */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -45,7 +45,7 @@ export default function VehicleServices() {
                 "Windscreen wipers and washers"
               ].map((item, index) => (
                 <li key={index} className="flex items-start text-sm text-gray-700">
-                  <CheckCircle className="text-green-500 w-5 h-5 mr-2 mt-0.5" />
+                  <CheckCircle className="text-blue-500 w-5 h-5 mr-2 mt-0.5" />
                   {item}
                 </li>
               ))}
@@ -77,7 +77,7 @@ export default function VehicleServices() {
                 "Basic safety checks"
               ].map((item, index) => (
                 <li key={index} className="flex items-start text-sm text-gray-700">
-                  <CheckCircle className="text-green-500 w-5 h-5 mr-2 mt-0.5" />
+                  <CheckCircle className="text-blue-500 w-5 h-5 mr-2 mt-0.5" />
                   {item}
                 </li>
               ))}

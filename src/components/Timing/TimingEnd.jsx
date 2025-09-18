@@ -24,7 +24,7 @@ export default function TimingEnd() {
           </div>
           <div className="flex justify-between items-center bg-gray-100 rounded px-4 py-3">
             <span className="font-semibold text-gray-800">Wet Belt (Ford EcoBoost)</span>
-            <span className="text-blue-600 font-medium">150,000 miles or 10 years</span>
+            <span className="text-blue-600 font-medium">100,000 miles or 10 years</span>
           </div>
           <div className="flex justify-between items-center bg-gray-100 rounded px-4 py-3">
             <span className="font-semibold text-gray-800">Timing Chain</span>

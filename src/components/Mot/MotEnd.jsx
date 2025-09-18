@@ -29,7 +29,7 @@ export default function MotEnd() {
   ];
 
   return (
-    <section className="bg-gradient-to-b from-white via-blue-50 to-rose-50 py-16 px-4">
+    <section className="bg-black py-16 px-4">
       <div className="max-w-7xl mx-auto bg-white rounded-xl shadow-md p-8 md:p-12">
         <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-10">
           Why Choose Mehran Garages for MOT?

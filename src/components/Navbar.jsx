@@ -20,15 +20,19 @@ const Navbar = () => {
     { label: "Tyre & Alignment", path: "/services/tyre-Alignment" },
     { label: "Clutch Repair", path: "/services/clutch" },
     { label: "Timing Systems", path: "/services/timing-system" },
+    { label: "Fleet Management", path: "/services/fleet-management" },
+    { label: "Commercial Van Repair", path: "/services/commercial-van" },
   ];
 
   return (
-    <nav className="bg-gradient-to-r from-blue-900 to-red-900 p-4 fixed top-0 left-0 right-0 z-50 shadow-lg">
+    <nav className="bg-gradient-to-r from-blue-500 to-red-900 fixed top-0 left-0 right-0 z-50 shadow-lg">
       <div className="flex items-center justify-between max-w-screen-xl mx-auto">
-        <div className="text-white text-2xl font-semibold">
-          <span>Mehran Garages</span>
-          <p className="text-sm">Professional Automotive Services</p>
-        </div>
+        {/* Logo */}
+        <img
+          src="/mehran-logo.png" // Logo image source (replace with your actual path or URL)
+          alt="Logo"
+          className="h-25 w-30" // Adjust the height of the logo as needed
+        />
 
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-8 text-white items-center relative" ref={dropdownRef}>
@@ -58,10 +62,11 @@ const Navbar = () => {
             </div>
           )}
 
-          <Link to="/about" className="hover:text-gray-300 text-lg">
+          {/* Fix for About Us Link */}
+          <Link to="#about" className="hover:text-gray-300 text-lg">
             About Us
           </Link>
-          <Link to="/contact" className="hover:text-gray-300 text-lg">
+          <Link to="#contact" className="hover:text-gray-300 text-lg">
             Contact
           </Link>
         </div>
@@ -122,14 +127,14 @@ const Navbar = () => {
           )}
 
           <Link
-            to="/about"
+            to="#about" // Change to hash link for smooth scrolling to the About section
             className="block py-2"
             onClick={() => setIsMobileMenuOpen(false)} // Close the menu
           >
             About Us
           </Link>
           <Link
-            to="/contact"
+            to="#contact" // Assuming the same for the contact link
             className="block py-2"
             onClick={() => setIsMobileMenuOpen(false)} // Close the menu
           >

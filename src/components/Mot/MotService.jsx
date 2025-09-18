@@ -3,18 +3,15 @@ import { CheckCircle } from 'lucide-react'; // or use your preferred icon librar
 
 export default function MOTServices() {
   return (
-    <section className="bg-gradient-to-b from-white via-blue-50 to-rose-50 py-16 px-4">
+    <section className="bg-black py-16 px-4">
       <div className="max-w-7xl mx-auto text-center">
         {/* Title */}
-        <h2 className="text-3xl font-bold text-gray-900 mb-8">Our Services</h2>
+        <h2 className="text-3xl font-bold text-blue-600 mb-8">Our Services</h2>
 
         {/* Tag Filters */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
-          <span className="px-4 py-2 rounded-full bg-blue-100 text-blue-700 font-medium">Engine Diagnostics</span>
-          <span className="px-4 py-2 rounded-full bg-red-100 text-red-600 font-medium">Brake Repair</span>
-          <span className="px-4 py-2 rounded-full bg-green-100 text-green-700 font-medium">Oil Change</span>
-          <span className="px-4 py-2 rounded-full bg-yellow-100 text-yellow-700 font-medium">Air Conditioning</span>
-          <span className="px-4 py-2 rounded-full bg-purple-100 text-purple-700 font-medium">MOT Testing</span>
+          <span className="px-4 py-2 rounded-full bg-blue-100 text-blue-700 font-medium">TPMS Sensor Calibration </span>
+          <span className="px-4 py-2 rounded-full bg-red-100 text-red-600 font-medium">Fault Finding And Programming</span>
         </div>
 
         {/* MOT Cards */}
@@ -42,7 +39,7 @@ export default function MOTServices() {
                 'Bodywork and structure inspection'
               ].map((item, index) => (
                 <li key={index} className="flex items-start text-sm text-gray-700">
-                  <CheckCircle className="text-green-500 w-5 h-5 mr-2 mt-0.5" />
+                  <CheckCircle className="text-blue-500 w-5 h-5 mr-2 mt-0.5" />
                   {item}
                 </li>
               ))}
@@ -72,7 +69,7 @@ export default function MOTServices() {
                 'Commercial vehicle emissions'
               ].map((item, index) => (
                 <li key={index} className="flex items-start text-sm text-gray-700">
-                  <CheckCircle className="text-green-500 w-5 h-5 mr-2 mt-0.5" />
+                  <CheckCircle className="text-blue-500 w-5 h-5 mr-2 mt-0.5" />
                   {item}
                 </li>
               ))}

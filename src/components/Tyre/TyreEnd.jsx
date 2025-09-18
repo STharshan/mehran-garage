@@ -60,7 +60,7 @@ export default function TyreEnd() {
       {/* Tyre Brands */}
       <div className="max-w-7xl mx-auto bg-gradient-to-r from-blue-100 to-red-100 rounded-xl p-6 md:p-10 text-center">
         <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8">
-          Tyre Brands We Stock
+          Tyre Brand We Offer
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-sm md:text-base text-gray-800">
           <div>
@@ -76,7 +76,7 @@ export default function TyreEnd() {
             <h3 className="text-red-600 font-semibold mb-2">Mid-Range</h3>
             <ul className="space-y-1">
               <li>Goodyear</li>
-              <li>Dunlop</li>
+              <li>Davanti</li>
               <li>Yokohama</li>
               <li>Hankook</li>
             </ul>
