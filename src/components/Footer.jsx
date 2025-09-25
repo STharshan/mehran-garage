@@ -112,7 +112,7 @@ const Footer = () => {
             href="https://www.ansely.co.uk/"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-semibold hover:underline text-black"
+            className="font-bold hover:underline text-white"
           >
             Ansely
           </a>

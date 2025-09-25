@@ -33,8 +33,10 @@ export default function WhyChooseUs() {
   useEffect(() => {
     // Initialize AOS when the component mounts
     AOS.init({
-      duration: 1000, // Animation duration in ms
-      once: true, // Trigger animation once when the element enters the viewport
+      duration: 1000, // Animation duration
+      easing: "ease-out-cubic", // Easing type
+      once: true, // Ensure the animation only triggers once
+      mirror: true, // Animate elements both scrolling down AND up
     });
   }, []);
 

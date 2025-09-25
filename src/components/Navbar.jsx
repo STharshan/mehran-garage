@@ -25,23 +25,22 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="bg-gradient-to-r from-gray-900  to-blue-800 fixed top-0 left-0 right-0 z-50 shadow-lg">
-      <div className="flex items-center justify-between max-w-screen-xl mx-auto">
+    <nav className="bg-gradient-to-r py-3 from-gray-900 to-blue-800 fixed top-0 left-0 right-0 z-50 shadow-lg">
+      <div className="flex items-center justify-between max-w-screen-xl mx-auto px-4 sm:px-6">
         {/* Logo */}
         <img
           src="/mehran-logo.png" // Logo image source (replace with your actual path or URL)
           alt="Logo"
-          className="h-25 w-30" // Adjust the height of the logo as needed
+          className="h-10 w-12 sm:h-16 sm:w-20" // Adjust the height and width of the logo for responsiveness
         />
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex space-x-8 text-white items-center relative" ref={dropdownRef}>
+        <div className="hidden md:flex space-x-8 text-white items-center relative">
           <Link to="/" className="hover:text-gray-300 text-lg">
             Home
           </Link>
           <button onClick={toggleServices} className="hover:text-gray-300 relative text-lg flex items-center">
             Services
-            {/* Down Arrow Icon */}
             <FaChevronDown
               className={`h-4 w-4 ml-2 transition-transform duration-200 ${isServicesVisible ? 'transform rotate-180' : ''}`}
             />
@@ -62,7 +61,6 @@ const Navbar = () => {
             </div>
           )}
 
-          {/* Fix for About Us Link */}
           <Link to="#about" className="hover:text-gray-300 text-lg">
             About Us
           </Link>
@@ -96,21 +94,18 @@ const Navbar = () => {
           <Link to="/" className="hover:text-gray-300 text-lg">
             Home
           </Link>
-          {/* Service toggle for mobile */}
           <div className="flex">
             <button
               className="py-2 text-lg flex items-center"
               onClick={() => setIsServicesVisible(!isServicesVisible)} // Toggle services visibility
             >
               Services
-              {/* Down Arrow Icon */}
               <FaChevronDown
                 className={`h-4 w-4 ml-1 mt-2.5 transition-transform duration-200 ${isServicesVisible ? 'transform rotate-180' : ''}`}
               />
             </button>
           </div>
 
-          {/* Display services if visible */}
           {isServicesVisible && (
             <div className="top-full right-0 mt-2 w-56 bg-white text-black shadow-md rounded-md z-50">
               {serviceLinks.map((service) => (
@@ -127,14 +122,14 @@ const Navbar = () => {
           )}
 
           <Link
-            to="#about" // Change to hash link for smooth scrolling to the About section
+            to="#about"
             className="block py-2"
             onClick={() => setIsMobileMenuOpen(false)} // Close the menu
           >
             About Us
           </Link>
           <Link
-            to="#contact" // Assuming the same for the contact link
+            to="#contact"
             className="block py-2"
             onClick={() => setIsMobileMenuOpen(false)} // Close the menu
           >

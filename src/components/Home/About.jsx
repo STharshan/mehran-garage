@@ -3,13 +3,15 @@ import AOS from 'aos';
 import 'aos/dist/aos.css'; // Import AOS styles
 
 const AboutUs = () => {
-    useEffect(() => {
-        // Initialize AOS
-        AOS.init({
-            duration: 1000, // Animation duration (in ms)
-            once: true, // Animation will trigger once when it comes into view
-        });
-    }, []);
+  useEffect(() => {
+    // Initialize AOS when the component mounts
+    AOS.init({
+      duration: 1000, // Animation duration
+      easing: "ease-out-cubic", // Easing type
+      once: true, // Ensure the animation only triggers once
+      mirror: true, // Animate elements both scrolling down AND up
+    });
+  }, []);
 
     return (
         <section className="scroll-m-25 bg-black" id="about">
@@ -19,7 +21,7 @@ const AboutUs = () => {
                     data-aos="fade-right" // AOS animation for the image on scroll
                 >
                     <img
-                        src="image.jpg"
+                        src="image.png"
                         alt="About Us"
                         className="w-full h-auto rounded-lg shadow-lg mt-10"
                     />
