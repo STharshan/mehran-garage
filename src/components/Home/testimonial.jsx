@@ -124,7 +124,7 @@ const Testimonials = () => {
           {testimonials.map((t, index) => (
             <div
               key={index}
-              className="bg-green-50 border border-green-100 rounded-lg p-6 text-left shadow-sm flex-shrink-0 w-80 active:scale-95 active:shadow-lg hover:scale-105 hover:shadow-2xl hover:z-10 transition-all duration-300 ease-in-out"
+              className="border bg-white hover:border-blue-600 hover:border-2 hover:shadow-blue-600 rounded-lg p-6 text-left shadow-sm flex-shrink-0 w-80 active:scale-95 active:shadow-lg hover:scale-105 hover:z-10 transition-all duration-300 ease-in-out"
               data-aos="zoom-in" // Animation for each testimonial card
               data-aos-delay={index * 100} // Stagger animations for each card
             >

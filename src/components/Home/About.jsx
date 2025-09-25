@@ -23,7 +23,7 @@ const AboutUs = () => {
                     <img
                         src="image.png"
                         alt="About Us"
-                        className="w-full h-auto rounded-lg shadow-lg mt-10"
+                        className="w-full h-auto rounded-lg shadow-lg mt-10 hover:shadow-lg active:shadow-lg hover:z-10 hover:scale-105 active:scale-105 transition"
                     />
                 </div>
                 <div

@@ -50,7 +50,7 @@ export default function WhyChooseUs() {
         {features.map((feature, index) => (
           <div
             key={index}
-            className="bg-white rounded-lg shadow-sm hover:shadow-lg active:shadow-lg hover:z-10 hover:scale-105 active:scale-105 transition p-6"
+            className="bg-white rounded-lg shadow-sm hover:shadow-lg hover:border-blue-600 hover:border-2 active:border-blue-600 active:border-2 active:shadow-lg hover:z-10 hover:scale-105 active:scale-105 transition p-6"
             data-aos="fade-up" // Apply fade-up animation for each feature
             data-aos-delay={index * 100} // Add delay for each feature to stagger the animation
           >
