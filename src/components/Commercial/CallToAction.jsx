@@ -7,7 +7,7 @@ const CallToAction = () => {
 
   const handleClick = () => {
     // Navigate to another route if needed (e.g., to the contact page or home)
-    navigate("/#contact");
+    navigate("/contact");
 
     // Scroll to the section after navigation
     const contactSection = document.getElementById("#contact");
@@ -29,17 +29,17 @@ const CallToAction = () => {
         {/* Responsive Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 w-full">
           {/* Schedule Service Button */}
-          <a
-            href="mailto:" 
+          <button
+             onClick={handleClick}
             className="flex items-center justify-center gap-2 border border-white px-5 py-3 rounded-md text-white hover:bg-white hover:text-blue-700 transition w-full"
           >
             <Calendar size={18} />
             Book Consultation
-          </a>
+          </button>
 
           {/* Emergency Repair Button */}
           <a
-            href="tel: 07846 953888"  // Trigger handleCall when clicked
+            href="tel:+447846953888" // Trigger handleCall when clicked
             className="flex items-center justify-center gap-2 bg-white text-black font-medium px-5 py-3 rounded-md shadow hover:bg-gray-300 transition w-full"
           >
             <Phone size={18} />

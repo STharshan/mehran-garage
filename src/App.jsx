@@ -16,6 +16,7 @@ import PrivacyPolicy from "./components/PrivacyPolicy";
 import TermsConditions from "./components/Term";
 import Fleet from "./pages/Fleet";
 import Commercial from "./pages/Commercial";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="services/mot-testing" element={<Mot />} />
         <Route path="/services/vehicle-service" element={<Vehicle />} />
         <Route path="services/diagnostics" element={<Diagnostics />} />

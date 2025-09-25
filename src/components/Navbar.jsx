@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FaChevronDown, FaBars } from "react-icons/fa"; // Importing required React Icons
 
 const Navbar = () => {
@@ -23,6 +23,12 @@ const Navbar = () => {
     { label: "Fleet Management", path: "/services/fleet-management" },
     { label: "Commercial Van Repair", path: "/services/commercial-van" },
   ];
+
+  const navigate = useNavigate();
+
+  const handleClick = () =>{
+    navigate("/#about");
+  }
 
   return (
     <nav className="bg-gradient-to-r from-gray-900 to-blue-800 fixed top-0 left-0 right-0 z-50 shadow-lg">
@@ -61,10 +67,10 @@ const Navbar = () => {
             </div>
           )}
 
-          <a href="#about" className="hover:text-gray-300 text-lg">
+          <button onClick={handleClick} className="hover:text-gray-300 text-lg">
             About Us
-          </a>
-          <a href="#contact" className="hover:text-gray-300 text-lg">
+          </button>
+          <a href="/contact" className="hover:text-gray-300 text-lg">
             Contact
           </a>
         </div>

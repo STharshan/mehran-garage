@@ -6,7 +6,7 @@ const CallToAction = () => {
 
   const handleClick = () => {
     // Navigate to another route if needed (e.g., to the contact page or home)
-    navigate("/#contact");
+    navigate("/contact");
 
     // Scroll to the section after navigation
     const contactSection = document.getElementById("#contact");
@@ -37,7 +37,7 @@ const CallToAction = () => {
           </button>
           {/* Call Now Button */}
           <a
-            href="tel: 07846 953888"// Trigger handleCall when clicked
+            href="tel:+447846953888"// Trigger handleCall when clicked
             className="flex items-center justify-center gap-2 bg-white text-black font-medium px-5 py-3 rounded-md shadow hover:bg-gray-300 transition w-full"
           >
             Schedule Your First Service

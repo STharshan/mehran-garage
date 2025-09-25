@@ -120,7 +120,7 @@ export default function ContactSection() {
   return (
     <section
       id="contact"
-      className="bg-black py-12 px-4 transition-colors duration-300 scroll-mt-24"
+      className="bg-black py-12 px-4 transition-colors duration-300 mt-24"
     >
       <div className="max-w-6xl mx-auto">
         <h2

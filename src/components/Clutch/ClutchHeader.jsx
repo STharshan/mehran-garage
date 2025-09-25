@@ -8,7 +8,7 @@ export default function ClutchHeader() {
 
   const handleClick = () => {
     // Navigate to another route if needed (e.g., to the contact page or home)
-    navigate("/#contact");
+    navigate("/contact");
 
     // Scroll to the section after navigation
     const contactSection = document.getElementById("#contact");
