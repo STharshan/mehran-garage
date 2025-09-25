@@ -132,7 +132,7 @@ export default function ServicesCarousel() {
           {services.map((service, index) => (
             <div
               key={index}
-              className="min-w-[290px] h-[320px] bg-white rounded-lg p-6 shadow-md focus:ring-offset-1 focus:ring-offset-blue-600 hover:ring-1 hover:ring-blue-600 hover:ring-offset-1 hover:ring-offset-blue-600 active:border-blue-600 active:border-2 text-center border hover:shadow-lg transition-transform hover:scale-105 active:scale-95 active:z-10 active:translate-y-[-10px] hover:z-20 hover:translate-y-[-10px] flex flex-col"
+              className="min-w-[290px] h-[320px] bg-white rounded-lg p-6 shadow-md text-center border transition-transform hover:ring-blue-600 hover:ring-offset-1 hover:ring-offset-blue-600  active:border-blue-600 active:border-2  active:scale-95 active:z-10 flex flex-col"
               data-aos="zoom-in" // Animation for each service card
               data-aos-delay={index * 100} // Stagger animations for each card
             >
@@ -145,7 +145,7 @@ export default function ServicesCarousel() {
 
               {/* Link to service details */}
               <Link to={service.path}>
-                <button className="mt-4 bg-gradient-to-r from-gray-900 to-blue-800 text-white px-2 w-50 mx-auto py-2 rounded hover:opacity-90 text-sm">
+                <button className="mt-4 bg-gradient-to-r cursor-pointer from-gray-900 to-blue-800 text-white px-2 w-50 mx-auto py-2 rounded hover:opacity-90 text-sm">
                   Learn More
                 </button>
               </Link>
