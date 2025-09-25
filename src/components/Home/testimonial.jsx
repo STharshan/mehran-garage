@@ -113,7 +113,7 @@ const Testimonials = () => {
         {/* Testimonials Container with Horizontal Scrolling */}
         <div
           ref={testimonialsRef}
-          className="flex gap-6 overflow-x-auto scroll-smooth"
+          className="flex gap-6 overflow-x-auto scroll-smooth p-3"
           style={{
             scrollBehavior: "smooth",
             overflowY: "hidden", // Prevent vertical scroll

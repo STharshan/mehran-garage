@@ -25,13 +25,13 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="bg-gradient-to-r py-3 from-gray-900 to-blue-800 fixed top-0 left-0 right-0 z-50 shadow-lg">
+    <nav className="bg-gradient-to-r from-gray-900 to-blue-800 fixed top-0 left-0 right-0 z-50 shadow-lg">
       <div className="flex items-center justify-between max-w-screen-xl mx-auto px-4 sm:px-6">
         {/* Logo */}
         <img
           src="/mehran-logo.png" // Logo image source (replace with your actual path or URL)
           alt="Logo"
-          className="h-10 w-12 sm:h-16 sm:w-20" // Adjust the height and width of the logo for responsiveness
+          className="h-25 w-30" // Adjust the height and width of the logo for responsiveness
         />
 
         {/* Desktop Menu */}

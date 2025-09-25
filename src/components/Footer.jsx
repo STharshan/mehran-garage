@@ -4,36 +4,27 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-r from-gray-900  to-blue-800 dark:bg-neutral-950 border-t dark:border-neutral-800 py-6">
+    <footer className="bg-gradient-to-r from-gray-900 to-blue-800 dark:bg-neutral-950 border-t dark:border-neutral-800 py-6">
       <div className="mx-auto max-w-[1400px] px-6">
         {/* Top Grid */}
         <div className="grid gap-12 md:grid-cols-4">
           {/* Brand */}
           <div className="max-w-sm">
             <img src="/mehran-logo.png" alt="SL Smart Repair logo" className="block" />
-            <p className="text-gray-200 -mt-15 dark:text-gray-300 leading-relaxed">
+            <p className="text-gray-200 -mt-15 dark:text-gray-300 leading-relaxed text-center">
               Professional automotive repair services that restore your vehicle to perfect condition.
             </p>
 
             {/* Socials */}
-            <div className="mt-4 flex space-x-4">
+            <div className="mt-4 flex justify-center">
               <a
-                href=""
+                href="https://web.facebook.com/p/Mehrans-Garage-100064103162650/?_rdc=1&_rdr#"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white dark:text-gray-300 hover:text-blue-600 dark:hover:text-gray-200"
                 aria-label="Facebook"
               >
                 <FaFacebook size={24} />
-              </a>
-              <a
-                href=""
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-white dark:text-gray-300 hover:text-pink-600 dark:hover:text-gray-200"
-                aria-label="Instagram"
-              >
-                <FaInstagram size={24} />
               </a>
             </div>
           </div>
@@ -96,8 +87,8 @@ const Footer = () => {
           <div>
             <h3 className="mb-4 font-semibold text-blue-600 text-lg dark:text-white">Hours</h3>
             <ul className="space-y-2 text-white dark:text-gray-300">
-              <p>Mon–Fri: 8:00 AM – 5:30 PM</p>
-              <p>Sat: 8:00 AM – 4:00 PM</p>
+              <p>Mon–Fri: 9:30 AM – 5:30 PM</p>
+              <p>Sat: 9:30 AM – 2:30 PM</p>
               <p>Sun: Closed</p>
             </ul>
           </div>
