@@ -1,5 +1,7 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import { FaArrowLeft, FaArrowRight, FaStar } from "react-icons/fa";
+import AOS from "aos";
+import "aos/dist/aos.css"; // Import AOS styles
 
 const testimonials = [
   {
@@ -40,7 +42,7 @@ const testimonials = [
   },
   {
     name: "Lawrence Byaruhanga",
-    time: "6 month ago",
+    time: "6 months ago",
     review:
       "Good service and repairs",
   },
@@ -54,6 +56,14 @@ const testimonials = [
 
 const Testimonials = () => {
   const testimonialsRef = useRef(null);
+
+  // Initialize AOS
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration in ms
+      once: true, // Trigger animation once when it enters the viewport
+    });
+  }, []);
 
   const scrollTestimonials = (direction) => {
     if (direction === "left") {
@@ -72,22 +82,26 @@ const Testimonials = () => {
   return (
     <section className="py-16 px-4 bg-black">
       <div className="max-w-7xl mx-auto text-center">
-        <h2 className="text-4xl font-bold text-blue-600">What Our Customers Say</h2>
-        <p className="text-gray-200 mt-2 mb-10">
+        <h2 className="text-4xl font-bold text-blue-600" data-aos="fade-up">
+          What Our Customers Say
+        </h2>
+        <p className="text-gray-200 mt-2 mb-10" data-aos="fade-up" data-aos-delay="200">
           Don&apos;t just take our word for it – hear from our satisfied customers
         </p>
 
         {/* Container for left and right arrows */}
         <div className="flex justify-between items-center mb-4">
           <button
-            className="text-blue-600 hover:text-blue-700 text-3xl"
+            className="text-blue-600 hover:text-blue-700 text-2xl sm:text-3xl md:text-4xl lg:text-5xl"
             onClick={() => scrollTestimonials("left")}
+            data-aos="fade-left" // AOS animation for left arrow
           >
             <FaArrowLeft />
           </button>
           <button
-            className="text-blue-600 hover:text-blue-700 text-3xl"
+            className="text-blue-600 hover:text-blue-700 text-2xl sm:text-3xl md:text-4xl lg:text-5xl"
             onClick={() => scrollTestimonials("right")}
+            data-aos="fade-right" // AOS animation for right arrow
           >
             <FaArrowRight />
           </button>
@@ -108,6 +122,8 @@ const Testimonials = () => {
             <div
               key={index}
               className="bg-green-50 border border-green-100 rounded-lg p-6 text-left shadow-sm flex-shrink-0 w-80 active:scale-95 active:shadow-lg hover:scale-105 hover:shadow-2xl hover:z-10 transition-all duration-300 ease-in-out"
+              data-aos="zoom-in" // Animation for each testimonial card
+              data-aos-delay={index * 100} // Stagger animations for each card
             >
               <div className="flex items-center gap-3 mb-2">
                 <div>
@@ -120,16 +136,10 @@ const Testimonials = () => {
                 </div>
               </div>
               <p className="text-gray-700 italic">{t.review}</p>
-              <div className="text-blue-600 font-bold">
-                {t.time}
-              </div>
+              <div className="text-blue-600 font-bold">{t.time}</div>
             </div>
           ))}
         </div>
-
-        {/* <div className="mt-10 bg-green-900 px-6 py-2 inline-block rounded-lg font-semibold hover:bg-green-700 transition">
-          <a href="https://www.google.com/search?sca_esv=f6511093bb828960&rlz=1C1KNTJ_enLK1089LK1089&sxsrf=AE3TifOkBLRu8nGy-FlAR1X3Lix5DYx9PA:1757413578963&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-E3sLC7bjrckBi1PHIXn7go03qo5P12SF7Jpk1I6xQBcPijXsdDbO7K6gm0uHbT1pSv9B-0jfeblIYcLgaCX4RGVhA65vYx3OO0T1N8aTPyD4JXO56g%3D%3D&q=Lahori+Chaska+The+Braai+Master+Reviews&sa=X&ved=2ahUKEwi41OPgu8uPAxXZrlYBHWgxAYcQ0bkNegQIJRAE&biw=1366&bih=633&dpr=1" target="_blank">Review</a>
-        </div> */}
       </div>
     </section>
   );

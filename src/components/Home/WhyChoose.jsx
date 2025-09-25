@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // Import AOS styles
 
 const features = [
   {
@@ -28,15 +30,27 @@ const features = [
 ];
 
 export default function WhyChooseUs() {
+  useEffect(() => {
+    // Initialize AOS when the component mounts
+    AOS.init({
+      duration: 1000, // Animation duration in ms
+      once: true, // Trigger animation once when the element enters the viewport
+    });
+  }, []);
+
   return (
-    <section className=" py-12 px-4">
-      <h2 className="text-3xl font-bold text-blue-600 text-center mb-10">Why Choose Us</h2>
+    <section className="py-12 px-4">
+      <h2 className="text-3xl font-bold text-blue-600 text-center mb-10" data-aos="fade-up">
+        Why Choose Us
+      </h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
         {features.map((feature, index) => (
           <div
             key={index}
-            className="bg-white rounded-lg shadow-sm hover:shadow-md transition p-6"
+            className="bg-white rounded-lg shadow-sm hover:shadow-lg active:shadow-lg hover:z-10 hover:scale-105 active:scale-105 transition p-6"
+            data-aos="fade-up" // Apply fade-up animation for each feature
+            data-aos-delay={index * 100} // Add delay for each feature to stagger the animation
           >
             <h3 className="text-blue-600 font-semibold text-lg mb-2">{feature.title}</h3>
             <p className="text-gray-700 text-sm">{feature.description}</p>

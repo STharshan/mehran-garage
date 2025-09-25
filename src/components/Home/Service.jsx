@@ -1,15 +1,17 @@
-import React, { useRef } from 'react';
-import { FaChevronLeft, FaChevronRight, FaCarSide, FaRegSnowflake, FaRegClock, FaShuttleVan } from 'react-icons/fa';
+import React, { useRef, useEffect } from 'react';
+import { FaChevronLeft, FaChevronRight, FaCarSide, FaRegSnowflake, FaRegClock, FaShuttleVan, FaCar } from 'react-icons/fa';
 import { IoSettingsOutline, IoSpeedometerOutline } from 'react-icons/io5';
 import { LuBrackets, LuCog, LuShipWheel, LuWrench } from 'react-icons/lu';
 import { MdManageAccounts } from 'react-icons/md';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // Import AOS styles
 
 const services = [
   {
     title: "MOT Testing",
     subtitle: "Class 4 & Class 7 MOT testing with certified technicians",
     description: "Professional MOT testing for cars and light commercial vehicles",
-    icon: <FaCarSide className="text-2xl text-white" />
+    icon: <FaCar className="text-2xl text-white" />
   },
   {
     title: "Vehicle Service",
@@ -76,6 +78,14 @@ const services = [
 export default function ServicesCarousel() {
   const scrollRef = useRef(null);
 
+  // Initialize AOS
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration (in ms)
+      once: true, // Trigger animation once when it enters the viewport
+    });
+  }, []);
+
   const scroll = (direction) => {
     const { current } = scrollRef;
     if (direction === 'left') {
@@ -94,6 +104,7 @@ export default function ServicesCarousel() {
         <button
           onClick={() => scroll('left')}
           className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white shadow-md p-3 rounded-full z-10 hover:bg-gray-100"
+          data-aos="fade-left" // Animation for left arrow
         >
           <FaChevronLeft />
         </button>
@@ -102,19 +113,22 @@ export default function ServicesCarousel() {
         <div
           ref={scrollRef}
           className="flex overflow-x-auto space-x-4 scrollbar-hide px-10"
+          data-aos="fade-up" // Animation for carousel container
         >
           {services.map((service, index) => (
             <div
               key={index}
-              className="min-w-[280px] h-[280px] max-w-sm bg-white rounded-lg p-6 shadow-md flex-shrink-0 text-center border hover:shadow-lg transition flex flex-col"
+              className="min-w-[280px] h-[320px] max-w-sm bg-white rounded-lg p-6 shadow-md flex-shrink-0 text-center border hover:shadow-lg transition flex flex-col"
+              data-aos="zoom-in" // Animation for each service card
+              data-aos-delay={index * 100} // Stagger animations for each card
             >
-              <div className="w-16 h-16 flex items-center justify-center mx-auto bg-gradient-to-r from-gray-900  to-blue-800 rounded-full mb-4">
+              <div className="w-16 h-16 flex items-center justify-center mx-auto bg-gradient-to-r from-gray-900 to-blue-800 rounded-full mb-4">
                 {service.icon}
               </div>
               <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
-              <p className="text-sm text-gray-600 mb-1">{service.subtitle}</p>
+              <p className="text-sm text-gray-600 mb-2">{service.subtitle}</p>
               <p className="text-sm text-gray-500 flex-grow">{service.description}</p>
-              <button className="mt-4 bg-gradient-to-r from-gray-900  to-blue-800 text-white px-2 w-50 mx-auto py-2 rounded hover:opacity-90 text-sm">
+              <button className="mt-4 bg-gradient-to-r from-gray-900 to-blue-800 text-white px-2 w-50 mx-auto py-2 rounded hover:opacity-90 text-sm">
                 Learn More
               </button>
             </div>
@@ -125,6 +139,7 @@ export default function ServicesCarousel() {
         <button
           onClick={() => scroll('right')}
           className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white shadow-md p-3 rounded-full z-10 hover:bg-gray-100"
+          data-aos="fade-right" // Animation for right arrow
         >
           <FaChevronRight />
         </button>
