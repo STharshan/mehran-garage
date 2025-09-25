@@ -120,7 +120,8 @@ export default function ServicesCarousel() {
           {services.map((service, index) => (
             <div
               key={index}
-             className="min-w-[290px] h-[320px] bg-white rounded-lg p-6 shadow-md  hover:border-blue-600 hover:border-2 active:border-blue-600 active:border-2 text-center border hover:shadow-lg transition transform hover:scale-105 active:scale-95 active:z-10 active:translate-y-[-10px] hover:z-20 hover:translate-y-[-10px] flex flex-col"
+             className="min-w-[290px] h-[320px] bg-white rounded-lg p-6 shadow-md  focus:ring-offset-1 focus:ring-offset-blue-600 hover:ring-1 hover:ring-blue-600
+      hover:ring-offset-1 hover:ring-offset-blue-600  active:border-blue-600 active:border-2 text-center border hover:shadow-lg transition transform hover:scale-105 active:scale-95 active:z-10 active:translate-y-[-10px] hover:z-20 hover:translate-y-[-10px] flex flex-col"
               data-aos="zoom-in" // Animation for each service card
               data-aos-delay={index * 100} // Stagger animations for each card
             >
