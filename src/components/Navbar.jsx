@@ -135,7 +135,7 @@ const Navbar = () => {
             About Us
           </a>
           <Link
-            to="#contact"
+            to="/contact"
             className="block py-2"
             onClick={() => setIsMobileMenuOpen(false)} // Close the menu
           >
