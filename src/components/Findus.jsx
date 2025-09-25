@@ -14,7 +14,7 @@ const FindUs = () => {
   }, []);
 
   return (
-    <section className="py-10 px-4 bg-black">
+    <section className="py-10 px-4 bg-white">
       <div className="max-w-7xl mx-auto text-center">
         <h2 className="text-2xl md:text-3xl font-bold mb-10 text-blue-600" data-aos="fade-up">
           Find Us

@@ -1,9 +1,12 @@
 // src/components/HeroSection.jsx
-import React, { useEffect } from "react";
+import React, { useEffect,  useRef  } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css"; // Import AOS styles
 
 const HeroSection = () => {
+
+  const homeRef = useRef(null); // Create a reference to the About section
+
   useEffect(() => {
     // Initialize AOS when the component mounts
     AOS.init({
@@ -11,10 +14,16 @@ const HeroSection = () => {
       easing: "ease-out-cubic", // Easing type
       once: true, // Animate only once
     });
+
+        // Scroll to the About section if the page is loaded with hash #about
+    if (window.location.hash === "#home" && homeRef.current) {
+      homeRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+
   }, []);
 
   return (
-    <div className="relative w-full h-150 bg-black dark:bg-gray-900">
+    <div className="relative w-full h-150 bg-black dark:bg-gray-900" id="home"  ref={homeRef}>
       {/* Background Video */}
       <video
         className="absolute inset-0 w-full h-full object-cover"

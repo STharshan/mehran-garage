@@ -1,10 +1,19 @@
 import { Phone, Calendar } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const CallToAction = () => {
   // Function to handle the call action
-  const handleCall = () => {
-    console.log("Calling 01159 641 600");
-    // You can add more actions here, like tracking analytics or showing a modal
+     const navigate = useNavigate();
+
+  const handleClick = () => {
+    // Navigate to another route if needed (e.g., to the contact page or home)
+    navigate("/#contact");
+
+    // Scroll to the section after navigation
+    const contactSection = document.getElementById("#contact");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
@@ -25,13 +34,12 @@ const CallToAction = () => {
             className="flex items-center justify-center gap-2 border border-white px-5 py-3 rounded-md text-white hover:bg-white hover:text-blue-700 transition w-full"
           >
             <Calendar size={18} />
-            Schedule Service
+            Book Consultation
           </a>
 
           {/* Emergency Repair Button */}
           <a
-            href="tel:01159641600" // Call action link
-            onClick={handleCall}  // Trigger handleCall when clicked
+            href="tel: 07846 953888"  // Trigger handleCall when clicked
             className="flex items-center justify-center gap-2 bg-white text-black font-medium px-5 py-3 rounded-md shadow hover:bg-gray-300 transition w-full"
           >
             <Phone size={18} />

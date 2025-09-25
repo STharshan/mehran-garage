@@ -1,10 +1,10 @@
 import React from "react";
-import { FaFacebook, FaInstagram } from "react-icons/fa";
+import { FaFacebook } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer id="contact" className="bg-gradient-to-r from-gray-900 to-blue-800 dark:bg-neutral-950 border-t dark:border-neutral-800 py-6">
+    <footer className="bg-gradient-to-r from-gray-900 to-blue-800 dark:bg-neutral-950 border-t dark:border-neutral-800 py-6">
       <div className="mx-auto max-w-[1400px] px-6">
         {/* Top Grid */}
         <div className="grid gap-12 md:grid-cols-4">
