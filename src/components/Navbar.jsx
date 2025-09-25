@@ -61,12 +61,12 @@ const Navbar = () => {
             </div>
           )}
 
-          <Link to="#about" className="hover:text-gray-300 text-lg">
+          <a href="#about" className="hover:text-gray-300 text-lg">
             About Us
-          </Link>
-          <Link to="#contact" className="hover:text-gray-300 text-lg">
+          </a>
+          <a href="#contact" className="hover:text-gray-300 text-lg">
             Contact
-          </Link>
+          </a>
         </div>
 
         {/* Contact on desktop */}

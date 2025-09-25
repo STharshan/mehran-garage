@@ -14,7 +14,7 @@ const AboutUs = () => {
   }, []);
 
     return (
-        <section className="scroll-m-25 bg-black" id="about">
+        <section className="scroll-m-25 bg-black py-10" id="about">
             <div className="flex flex-col-reverse md:flex-row items-center p-6">
                 <div
                     className="md:w-1/2 p-4"
@@ -23,11 +23,11 @@ const AboutUs = () => {
                     <img
                         src="image.png"
                         alt="About Us"
-                        className="w-full h-auto rounded-lg shadow-lg mt-10 hover:shadow-lg active:shadow-lg hover:z-10 hover:scale-105 active:scale-105 transition"
+                        className="w-full h-auto rounded-lg shadow-lg hover:shadow-lg active:shadow-lg hover:z-10 hover:scale-105 active:scale-105 transition"
                     />
                 </div>
                 <div
-                    className="md:w-1/2 p-4 mt-10 py-15"
+                    className="md:w-1/2 p-6"
                     data-aos="fade-left" // AOS animation for the text section on scroll
                 >
                     <h2 className="text-3xl font-semibold text-blue-600 mb-4">About Us</h2>
