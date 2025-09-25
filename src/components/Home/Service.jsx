@@ -5,73 +5,85 @@ import { LuBrackets, LuCog, LuShipWheel, LuWrench } from 'react-icons/lu';
 import { MdManageAccounts } from 'react-icons/md';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // Import AOS styles
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 
 const services = [
   {
     title: "MOT Testing",
     subtitle: "Class 4 & Class 7 MOT testing with certified technicians",
     description: "Professional MOT testing for cars and light commercial vehicles",
-    icon: <FaCar className="text-2xl text-white" />
+    icon: <FaCar className="text-2xl text-white" />,
+    path: "/services/mot-testing", // Route path for this service
   },
   {
     title: "Vehicle Service",
     subtitle: "Comprehensive vehicle servicing and maintenance",
     description: "Full and interim services to keep your vehicle running smoothly",
-    icon: <LuWrench className="text-2xl text-white" />
+    icon: <LuWrench className="text-2xl text-white" />,
+    path: "/services/vehicle-service", // Route path for this service
   },
   {
     title: "Diagnostics",
     subtitle: "Advanced diagnostic services with dealer-level tools",
     description: "ECU updates and dealer-level diagnostic information",
-    icon: <IoSettingsOutline className="text-2xl text-white" />
+    icon: <IoSettingsOutline className="text-2xl text-white" />,
+    path: "/services/diagnostics", // Route path for this service
   },
   {
     title: "Braking Systems",
     subtitle: "Complete brake repair and maintenance services",
     description: "Brake pads, discs, fluid changes and brake system repairs",
-    icon: <LuBrackets className="text-2xl text-white" />
+    icon: <LuBrackets className="text-2xl text-white" />,
+    path: "/services/brake", // Route path for this service
   },
   {
     title: "Suspension",
     subtitle: "Suspension repair and replacement services",
     description: "Shock absorbers, springs, and complete suspension systems",
-    icon: <IoSpeedometerOutline className="text-2xl text-white" />
+    icon: <IoSpeedometerOutline className="text-2xl text-white" />,
+    path: "/services/suspension", // Route path for this service
   },
   {
     title: "Air Conditioning",
     subtitle: "AC repair, servicing and re-gassing",
     description: "Keep cool with our professional AC services",
-    icon: <FaRegSnowflake className="text-2xl text-white" />
+    icon: <FaRegSnowflake className="text-2xl text-white" />,
+    path: "/services/air-condition", // Route path for this service
   },
   {
     title: "Tyres & Alignment",
     subtitle: "High-tech wheel alignment and tyre services",
     description: "Premium tyres and precision wheel alignment technology",
-    icon: <LuShipWheel className="text-2xl text-white" />
+    icon: <LuShipWheel className="text-2xl text-white" />,
+    path: "/services/tyre-alignment", // Route path for this service
   },
   {
     title: "Clutch Repair",
     subtitle: "Complete clutch repair and replacement",
     description: "Expert clutch repairs for all vehicle types",
-    icon: <LuCog className="text-2xl text-white" />
+    icon: <LuCog className="text-2xl text-white" />,
+    path: "/services/clutch", // Route path for this service
   },
   {
     title: "Timing Systems",
     subtitle: "Timing belts, wet belts, and timing chains",
     description: "Precision timing system repairs and replacements",
-    icon: <FaRegClock className="text-2xl text-white" />
+    icon: <FaRegClock className="text-2xl text-white" />,
+    path: "/services/timing-system", // Route path for this service
   },
   {
     title: "Fleet Management",
     subtitle: "Fleet management services for businesses",
     description: "Efficient and reliable fleet management solutions",
-    icon: <MdManageAccounts className="text-2xl text-white" />
+    icon: <MdManageAccounts className="text-2xl text-white" />,
+    path: "/services/fleet-management", // Route path for this service
   },
   {
     title: "Commercial Van",
     subtitle: "Commercial van servicing and repairs",
     description: "Comprehensive service for commercial vans",
-    icon: <FaShuttleVan className="text-2xl text-white" />
+    icon: <FaShuttleVan className="text-2xl text-white" />,
+    path: "/services/commercial-van", // Route path for this service
   },
 ];
 
@@ -130,9 +142,13 @@ export default function ServicesCarousel() {
               <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
               <p className="text-sm text-gray-600 mb-2">{service.subtitle}</p>
               <p className="text-sm text-gray-500 flex-grow">{service.description}</p>
-              <button className="mt-4 bg-gradient-to-r from-gray-900 to-blue-800 text-white px-2 w-50 mx-auto py-2 rounded hover:opacity-90 text-sm">
-                Learn More
-              </button>
+
+              {/* Link to service details */}
+              <Link to={service.path}>
+                <button className="mt-4 bg-gradient-to-r from-gray-900 to-blue-800 text-white px-2 w-50 mx-auto py-2 rounded hover:opacity-90 text-sm">
+                  Learn More
+                </button>
+              </Link>
             </div>
           ))}
         </div>
