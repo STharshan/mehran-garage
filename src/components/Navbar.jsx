@@ -26,7 +26,7 @@ const Navbar = () => {
 
   const navigate = useNavigate();
 
-  const handleClick = () =>{
+  const handleClick = () => {
     navigate("/#about");
   }
 
@@ -130,17 +130,15 @@ const Navbar = () => {
           <a
             href="#about"
             className="block py-2"
-            onClick={() => setIsMobileMenuOpen(false)} // Close the menu
           >
             About Us
           </a>
-          <Link
-            to="/contact"
+          <a
+            href="/contact"  // Corrected typo here
             className="block py-2"
-            onClick={() => setIsMobileMenuOpen(false)} // Close the menu
           >
             Contact
-          </Link>
+          </a>
 
           <div className="flex items-center space-x-4 mt-4">
             <span>Call Us Today</span>
