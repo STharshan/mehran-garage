@@ -25,7 +25,13 @@ export default function VehicleWhyChooseUs() {
       <h2 className="text-3xl font-bold mb-12 text-black">Why Choose Us?</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
         {features.map((feature, index) => (
-          <div key={index} className="flex flex-col items-center text-center px-4">
+          <div
+            key={index}
+            className="bg-white rounded-xl p-8 shadow-md transition-all duration-300 ease-in-out
+            hover:scale-105 hover:shadow-[0_0_25px_5px_rgba(59,130,246,0.7)]
+            active:scale-95 active:shadow-[0_0_30px_6px_rgba(59,130,246,0.9)]
+            flex flex-col items-center text-center"
+          >
             <div className="mb-4">{feature.icon}</div>
             <h3 className="text-lg text-black font-semibold mb-2">{feature.title}</h3>
             <p className="text-gray-700">{feature.description}</p>

@@ -43,14 +43,12 @@ const testimonials = [
   {
     name: "Lawrence Byaruhanga",
     time: "6 months ago",
-    review:
-      "Good service and repairs",
+    review: "Good service and repairs",
   },
   {
     name: "Shamal Mohammed",
     time: "5 years ago",
-    review:
-      "Best service and very polite",
+    review: "Best service and very polite",
   },
 ];
 
@@ -59,12 +57,11 @@ const Testimonials = () => {
 
   // Initialize AOS
   useEffect(() => {
-    // Initialize AOS when the component mounts
     AOS.init({
-      duration: 1000, // Animation duration
-      easing: "ease-out-cubic", // Easing type
-      once: true, // Ensure the animation only triggers once
-      mirror: true, // Animate elements both scrolling down AND up
+      duration: 1000,
+      easing: "ease-out-cubic",
+      once: true,
+      mirror: true,
     });
   }, []);
 
@@ -88,23 +85,28 @@ const Testimonials = () => {
         <h2 className="text-4xl font-bold text-blue-600" data-aos="fade-up">
           What Our Customers Say
         </h2>
-        <p className="text-gray-200 mt-2 mb-10" data-aos="fade-up" data-aos-delay="200">
-          Don&apos;t just take our word for it – hear from our satisfied customers
+        <p
+          className="text-gray-200 mt-2 mb-10"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          Don&apos;t just take our word for it – hear from our satisfied
+          customers
         </p>
 
         {/* Container for left and right arrows */}
         <div className="flex justify-between items-center mb-4">
           <button
-            className="text-blue-600 hover:text-blue-700 text-2xl sm:text-3xl md:text-4xl lg:text-5xl"
+            className="text-blue-600 hover:text-blue-700 text-2xl sm:text-3xl md:text-4xl lg:text-5xl transition-all duration-300 hover:drop-shadow-[0_0_15px_rgba(59,130,246,0.8)]"
             onClick={() => scrollTestimonials("left")}
-            data-aos="fade-left" // AOS animation for left arrow
+            data-aos="fade-left"
           >
             <FaArrowLeft />
           </button>
           <button
-            className="text-blue-600 hover:text-blue-700 text-2xl sm:text-3xl md:text-4xl lg:text-5xl"
+            className="text-blue-600 hover:text-blue-700 text-2xl sm:text-3xl md:text-4xl lg:text-5xl transition-all duration-300 hover:drop-shadow-[0_0_15px_rgba(59,130,246,0.8)]"
             onClick={() => scrollTestimonials("right")}
-            data-aos="fade-right" // AOS animation for right arrow
+            data-aos="fade-right"
           >
             <FaArrowRight />
           </button>
@@ -116,20 +118,21 @@ const Testimonials = () => {
           className="flex gap-6 overflow-x-auto scroll-smooth p-3"
           style={{
             scrollBehavior: "smooth",
-            overflowY: "hidden", // Prevent vertical scroll
-            scrollbarWidth: "none", // Firefox
-            msOverflowStyle: "none", // IE and Edge
+            overflowY: "hidden",
+            scrollbarWidth: "none",
+            msOverflowStyle: "none",
           }}
         >
           {testimonials.map((t, index) => (
             <div
               key={index}
-              className="border bg-white  hover:shadow-blue-600
-    
-      focus:ring-offset-1 focus:ring-offset-blue-600 hover:ring-1 hover:ring-blue-600
-      hover:ring-offset-1 hover:ring-offset-blue-600 rounded-lg p-6 text-left shadow-sm flex-shrink-0 w-80 active:scale-95 active:shadow-lg hover:scale-105 hover:z-10 transition-all duration-300 ease-in-out"
-              data-aos="zoom-in" // Animation for each testimonial card
-              data-aos-delay={index * 100} // Stagger animations for each card
+              className="bg-white rounded-lg p-6 text-left flex-shrink-0 w-80 
+              border border-gray-200 shadow-md transition-all duration-300 ease-in-out
+              hover:scale-105 hover:border-blue-500 
+              hover:shadow-[0_0_25px_5px_rgba(59,130,246,0.8)]
+              active:scale-95 active:shadow-[0_0_30px_6px_rgba(59,130,246,0.9)]"
+              data-aos="zoom-in"
+              data-aos-delay={index * 100}
             >
               <div className="flex items-center gap-3 mb-2">
                 <div>
@@ -141,7 +144,7 @@ const Testimonials = () => {
                   </div>
                 </div>
               </div>
-              <p className="text-gray-700 italic">{t.review}</p>
+              <p className="text-gray-700 italic mb-3">{t.review}</p>
               <div className="text-blue-600 font-bold">{t.time}</div>
             </div>
           ))}

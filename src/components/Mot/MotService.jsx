@@ -31,10 +31,21 @@ const motData = [
 ];
 
 const MOTCard = ({ title, description, items, iconPath }) => (
-  <div className=" rounded-xl shadow-sm border p-8 text-left hover:shadow-md transition-all">
+  <div
+    className="rounded-xl bg-white p-8 text-left shadow-md 
+    transition-all duration-300 ease-in-out
+    hover:scale-105 hover:shadow-[0_0_25px_5px_rgba(59,130,246,0.7)]
+    active:scale-95 active:shadow-[0_0_30px_6px_rgba(59,130,246,0.9)]"
+  >
     <div className="flex flex-col items-center mb-6">
       <div className="w-14 h-14 rounded-full bg-gradient-to-r from-blue-800 to-gray-900 flex items-center justify-center mb-3">
-        <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="w-6 h-6 text-black"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
           <path d={iconPath} />
         </svg>
       </div>
@@ -61,8 +72,12 @@ export default function MOTServices() {
 
         {/* Tag Filters */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
-          <span className="px-4 py-2 rounded-full bg-blue-100 text-blue-700 font-medium">TPMS Sensor Calibration </span>
-          <span className="px-4 py-2 rounded-full bg-blue-100 text-blue-600 font-medium">Fault Finding And Programming</span>
+          <span className="px-4 py-2 rounded-full bg-blue-100 text-blue-700 font-medium">
+            TPMS Sensor Calibration
+          </span>
+          <span className="px-4 py-2 rounded-full bg-blue-100 text-blue-600 font-medium">
+            Fault Finding And Programming
+          </span>
         </div>
 
         {/* MOT Cards */}

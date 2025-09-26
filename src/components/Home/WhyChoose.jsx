@@ -33,16 +33,19 @@ export default function WhyChooseUs() {
   useEffect(() => {
     // Initialize AOS when the component mounts
     AOS.init({
-      duration: 1000, // Animation duration
-      easing: "ease-out-cubic", // Easing type
-      once: true, // Ensure the animation only triggers once
-      mirror: true, // Animate elements both scrolling down AND up
+      duration: 1000,
+      easing: "ease-out-cubic",
+      once: true,
+      mirror: true,
     });
   }, []);
 
   return (
     <section className="py-12 px-4">
-      <h2 className="text-3xl font-bold text-blue-600 text-center mb-10" data-aos="fade-up">
+      <h2
+        className="text-3xl font-bold text-blue-600 text-center mb-10"
+        data-aos="fade-up"
+      >
         Why Choose Us
       </h2>
 
@@ -50,12 +53,18 @@ export default function WhyChooseUs() {
         {features.map((feature, index) => (
           <div
             key={index}
-            className="bg-white rounded-lg shadow-sm hover:shadow-lg focus:ring-offset-1 focus:ring-offset-blue-600 hover:ring-1 hover:ring-blue-600
-      hover:ring-offset-1 hover:ring-offset-blue-600 active:border-blue-600 active:border-2 active:shadow-lg hover:z-10 hover:scale-105 active:scale-105 transition p-6"
-            data-aos="fade-up" // Apply fade-up animation for each feature
-            data-aos-delay={index * 100} // Add delay for each feature to stagger the animation
+            className="bg-white rounded-lg p-6 shadow-md 
+            transition-all duration-300 ease-in-out
+            hover:scale-105 
+            hover:shadow-[0_0_25px_5px_rgba(59,130,246,0.7)]
+            active:scale-95 
+            active:shadow-[0_0_30px_6px_rgba(59,130,246,0.9)]"
+            data-aos="fade-up"
+            data-aos-delay={index * 100}
           >
-            <h3 className="text-blue-600 font-semibold text-lg mb-2">{feature.title}</h3>
+            <h3 className="text-blue-600 font-semibold text-lg mb-2">
+              {feature.title}
+            </h3>
             <p className="text-gray-700 text-sm">{feature.description}</p>
           </div>
         ))}
