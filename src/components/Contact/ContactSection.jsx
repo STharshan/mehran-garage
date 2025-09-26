@@ -25,9 +25,11 @@ const SERVICES = [
   "Commercial Van Services",
 ];
 
+// Email regex
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
-const PHONE_REGEX =
-  /^(?:\+?44\s?7\d{3}|\(?07\d{3}\)?)\s?\d{3}\s?\d{3}$|^[0-9+\-\s()]{7,}$/;
+
+// Updated phone number regex to match UK format
+const PHONE_REGEX = /^(?:\+44|0)[1-9]\d{8,9}$/;
 
 export default function ContactSection() {
   const formRef = useRef(null);
@@ -49,12 +51,16 @@ export default function ContactSection() {
         return "";
       case "phone":
         if (!value) return ""; // optional
-        if (!PHONE_REGEX.test(value.trim()))
+        if (!PHONE_REGEX.test(value.trim())) {
           return "Enter a valid phone (e.g. 07912 345 678 or +44 7912 345 678).";
+        }
         return "";
       case "message":
         if (!value?.trim()) return "Please tell us a bit about the issue.";
         if (value.trim().length < 10) return "Message should be at least 10 characters.";
+        return "";
+      case "service":
+        if (!value) return "Please select a service."; // Error for service field
         return "";
       default:
         return "";
@@ -63,7 +69,7 @@ export default function ContactSection() {
 
   const validateForm = (form) => {
     const fd = new FormData(form);
-    const fields = ["name", "email", "phone", "message"];
+    const fields = ["name", "email", "phone", "message", "service"];
     const newErrors = {};
     fields.forEach((f) => {
       const msg = validateField(f, fd.get(f));
@@ -226,15 +232,17 @@ export default function ContactSection() {
                   id="service"
                   value={selectedService}
                   onChange={(e) => setSelectedService(e.target.value)}
-                  className={`w-full border bg-white dark:bg-neutral-900 text-gray-900 dark:text-gray-100 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-600 ${errors.email && touched.email ? "border-blue-600" : "border-gray-300 dark:border-gray-600"}`}
+                  className={`w-full border bg-white dark:bg-neutral-900 text-gray-900 dark:text-gray-100 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-600 ${errors.service && touched.service ? "border-blue-600" : "border-gray-300 dark:border-gray-600"}`}
                   required
                 >
-                  <option value="" className="text-gray-900">Select a Service*</option>
+                  <option value="">-- Select a Service --</option>
                   {SERVICES.map((service) => (
                     <option key={service} value={service}>{service}</option>
                   ))}
                 </select>
-                
+                {errors.service && touched.service && (
+                  <p id="service-error" className="mt-1 text-sm text-blue-600">{errors.service}</p>
+                )}
               </div>
 
               <div>
@@ -247,7 +255,7 @@ export default function ContactSection() {
                   aria-invalid={!!errors.phone}
                   aria-describedby={errors.phone ? "phone-error" : undefined}
                   pattern={PHONE_REGEX.source}
-                  title="UK phone example: 07912 345 678 or +44 7912 345 678"
+                  title="Enter a valid phone number like 07912 345 678 or +44 7912 345 678"
                   className={`w-full border bg-white dark:bg-neutral-900 text-gray-900 dark:text-gray-100 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-600 ${errors.phone && touched.phone ? "border-blue-600" : "border-gray-300 dark:border-gray-600"}`}
                 />
                 {errors.phone && touched.phone && (
