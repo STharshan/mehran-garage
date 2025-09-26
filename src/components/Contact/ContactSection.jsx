@@ -6,8 +6,23 @@ const HOURS = [
   { day: "Wednesday", time: "9:30 am – 6:30 pm" },
   { day: "Thursday", time: "9:30 am – 6:30 pm" },
   { day: "Friday", time: "9:30 am – 6:30 pm" },
-  { day: "Saturday", time: "9:30 am – 2:30 pm"},
+  { day: "Saturday", time: "9:30 am – 2:30 pm" },
   { day: "Sunday", time: "Closed" },
+];
+
+// Static list of services
+const SERVICES = [
+  "MOT Testing",
+  "Vehicle Service",
+  "Diagnostics",
+  "Brake Service",
+  "Suspension",
+  "Air Conditioning",
+  "Tyre Alignment",
+  "Clutch Repair",
+  "Timing System",
+  "Fleet Management",
+  "Commercial Van Services",
 ];
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
@@ -19,6 +34,7 @@ export default function ContactSection() {
   const [status, setStatus] = useState({ state: "idle", message: "" });
   const [touched, setTouched] = useState({});
   const [errors, setErrors] = useState({});
+  const [selectedService, setSelectedService] = useState(""); // State to manage selected service
 
   // Validate form fields
   const validateField = (name, value) => {
@@ -88,12 +104,13 @@ export default function ContactSection() {
     const phone = formData.get("phone");
     const message = formData.get("message");
 
-    // Create a WhatsApp message
+    // Create a WhatsApp message with selected service
     const messageText = `
       Name: ${name}
       Email: ${email}
       Phone: ${phone}
       Message: ${message}
+      Service Requested: ${selectedService}
     `;
     
     // URL encode the message text
@@ -115,18 +132,13 @@ export default function ContactSection() {
     formRef.current.reset();
     setTouched({});
     setErrors({});
+    setSelectedService(""); // Reset selected service after submission
   };
 
   return (
-    <section
-      id="contact"
-      className="bg-black py-12 px-4 transition-colors duration-300 mt-24"
-    >
+    <section id="contact" className="bg-black py-12 px-4 transition-colors duration-300 mt-24">
       <div className="max-w-6xl mx-auto">
-        <h2
-          data-aos="fade-up"
-          className="text-center text-2xl md:text-3xl font-bold text-blue-600"
-        >
+        <h2 data-aos="fade-up" className="text-center text-2xl md:text-3xl font-bold text-blue-600">
           Ready to Get Your Car Fixed?
         </h2>
         <p data-aos="fade-up" className="text-center text-gray-500 dark:text-gray-400 mt-2 max-w-2xl mx-auto">
@@ -135,10 +147,7 @@ export default function ContactSection() {
 
         <div className="mt-10 grid md:grid-cols-2 gap-8">
           {/* Left Side - Contact Information */}
-          <div
-            data-aos="fade-right"
-            className="bg-white dark:bg-neutral-800 rounded-2xl shadow p-6 md:p-8 transition-colors duration-300"
-          >
+          <div data-aos="fade-right" className="bg-white dark:bg-neutral-800 rounded-2xl shadow p-6 md:p-8 transition-colors duration-300">
             <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100">
               Contact Information
             </h3>
@@ -155,10 +164,7 @@ export default function ContactSection() {
 
               <div>
                 <p className="font-medium">Phone</p>
-                <a
-                  href="tel:+447989668752"
-                  className="hover:underline text-blue-600"
-                >
+                <a href="tel:+447989668752" className="hover:underline text-blue-600">
                   07846 953888
                 </a>
               </div>
@@ -167,16 +173,9 @@ export default function ContactSection() {
                 <p className="font-medium dark:text-gray-200">Opening Hours</p>
                 <ul className="mt-2 divide-y divide-gray-200 dark:divide-neutral-700 border border-gray-200 dark:border-neutral-700 rounded-lg overflow-hidden">
                   {HOURS.map(({ day, time }) => (
-                    <li
-                      key={day}
-                      className="grid grid-cols-2 gap-4 px-4 py-2 text-sm md:text-base"
-                    >
-                      <span className="text-gray-700 dark:text-gray-200">
-                        {day}
-                      </span>
-                      <span className="text-right font-medium text-gray-900 dark:text-gray-100">
-                        {time}
-                      </span>
+                    <li key={day} className="grid grid-cols-2 gap-4 px-4 py-2 text-sm md:text-base">
+                      <span className="text-gray-700 dark:text-gray-200">{day}</span>
+                      <span className="text-right font-medium text-gray-900 dark:text-gray-100">{time}</span>
                     </li>
                   ))}
                 </ul>
@@ -185,14 +184,12 @@ export default function ContactSection() {
           </div>
 
           {/* Right Side - Contact Form */}
-          <div
-            data-aos="fade-left"
-            className="bg-white dark:bg-neutral-800 rounded-2xl shadow p-6 md:p-8 transition-colors duration-300"
-          >
+          <div data-aos="fade-left" className="bg-white dark:bg-neutral-800 rounded-2xl shadow p-6 md:p-8 transition-colors duration-300">
             <form ref={formRef} onSubmit={sendWhatsAppMessage} className="space-y-4" noValidate>
               {/* Honeypot (should stay hidden) */}
               <input type="text" name="website" tabIndex="-1" autoComplete="off" className="hidden" />
 
+              {/* Name, Email, Phone, Message Inputs as before */}
               <div>
                 <input
                   type="text"
@@ -208,14 +205,12 @@ export default function ContactSection() {
                   <p id="name-error" className="mt-1 text-sm text-blue-600">{errors.name}</p>
                 )}
               </div>
-
               <div>
                 <input
                   type="email"
                   name="email"
                   placeholder="your.email@example.com*"
-                  required
-                  inputMode="email"
+                  required inputMode="email"
                   onBlur={handleBlur}
                   aria-invalid={!!errors.email}
                   aria-describedby={errors.email ? "email-error" : undefined}
@@ -223,9 +218,23 @@ export default function ContactSection() {
                   title="Enter a valid email like name@example.com"
                   className={`w-full border bg-white dark:bg-neutral-900 text-gray-900 dark:text-gray-100 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-600 ${errors.email && touched.email ? "border-blue-600" : "border-gray-300 dark:border-gray-600"}`}
                 />
-                {errors.email && touched.email && (
-                  <p id="email-error" className="mt-1 text-sm text-blue-600">{errors.email}</p>
-                )}
+                {errors.email && touched.email && (<p id="email-error" className="mt-1 text-sm text-blue-600">{errors.email}</p>)}
+              </div>
+              <div>
+                <select
+                  name="service"
+                  id="service"
+                  value={selectedService}
+                  onChange={(e) => setSelectedService(e.target.value)}
+                  className={`w-full border bg-white dark:bg-neutral-900 text-gray-900 dark:text-gray-100 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-600 ${errors.email && touched.email ? "border-blue-600" : "border-gray-300 dark:border-gray-600"}`}
+                  required
+                >
+                  <option value="" className="text-gray-900">Select a Service*</option>
+                  {SERVICES.map((service) => (
+                    <option key={service} value={service}>{service}</option>
+                  ))}
+                </select>
+                
               </div>
 
               <div>

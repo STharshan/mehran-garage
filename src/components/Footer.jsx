@@ -57,12 +57,12 @@ const Footer = () => {
                   07846 953888
                 </a>
               </li>
-              <li>
+              {/* <li>
                 Email:{" "}
                 <a href="mailto:Sldetailingservices@gmail.com" className="hover:text-gray-400 dark:hover:text-gray-200">
                   Sldetailingservices@gmail.com
                 </a>
-              </li>
+              </li> */}
               <li>
                 Address:{" "}
                 <a
