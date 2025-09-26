@@ -78,7 +78,6 @@ const TermsConditions = () => {
                       </p>
                       <div className="text-white">
                           <p><strong>Mehran's Garage</strong></p>
-                          <p>Email: <a href="mailto:Sldetailingservices@gmail.com" className="text-blue-600 hover:underline">Sldetailingservices@gmail.com</a></p>
                           <p>Phone: 07846 953888</p>
                           <p>Address: 29 Church St, Old Basford Nottingham NG6 0GA United Kingdom</p>
                       </div>
