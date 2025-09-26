@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { FaChevronDown, FaBars } from "react-icons/fa"; // Importing required React Icons
+import { HashLink } from "react-router-hash-link";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -67,9 +68,9 @@ const Navbar = () => {
             </div>
           )}
 
-          <button onClick={handleClick} className="hover:text-gray-300 text-lg">
+          <HashLink smooth  to="/#about" className="hover:text-gray-300 text-lg">
             About Us
-          </button>
+          </HashLink>
           <a href="/contact" className="hover:text-gray-300 text-lg">
             Contact
           </a>
