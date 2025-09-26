@@ -5,7 +5,7 @@ const services = [
   {
     title: "Standard Air Con Re-Gas",
     subtitle: "For vehicles manufactured before 2017 using R134a gas",
-    iconPath: "M3 10h14l1-2h2a1 1 0 0 1 1 1v2h-1l-1 2h-1.5M3 10v4a2 2 0 0 0 2 2h1.5M10 14v2m-2 0h4", // Simplified icon path
+    iconPath: "M3 10h14l1-2h2a1 1 0 0 1 1 1v2h-1l-1 2h-1.5M3 10v4a2 2 0 0 0 2 2h1.5M10 14v2m-2 0h4",
     features: [
       'Refrigerant refill & top-up',
       'Pressure & temperature checks',
@@ -20,7 +20,7 @@ const services = [
   {
     title: "New Generation Air Con Re-Gas",
     subtitle: "For vehicles manufactured after 2017 using R1234yf gas",
-    iconPath: "M2 12h18M2 16h18M4 6h16l2 6H2l2-6z", // Simplified icon path
+    iconPath: "M2 12h18M2 16h18M4 6h16l2 6H2l2-6z",
     features: [
       'Advanced refrigerant refill & calibration',
       'Full system pressure & leak testing',
@@ -50,12 +50,16 @@ export default function AirConditionServices() {
           <span className="px-4 py-2 rounded-full bg-blue-100 text-blue-600 font-medium">Fresh Air</span>
         </div>
 
-        {/* MOT Cards */}
+        {/* Service Cards */}
         <div className="grid md:grid-cols-2 gap-8">
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl shadow-sm border p-8 text-left hover:shadow-md transition-all"
+              className="bg-white rounded-xl p-8 text-left 
+                         shadow-sm 
+                         transform transition-all duration-300 ease-in-out 
+                         hover:scale-105 active:scale-105 
+                         hover:shadow-[0_0_25px_5px_rgba(0,123,255,0.4)]"
             >
               <div className="flex flex-col items-center mb-6">
                 <div className="w-14 h-14 rounded-full bg-gradient-to-r from-blue-800 to-gray-900 flex items-center justify-center mb-3">
@@ -67,8 +71,8 @@ export default function AirConditionServices() {
                 <p className="text-sm text-gray-500 text-center">{service.subtitle}</p>
               </div>
               <ul className="space-y-3">
-                {service.features.map((item, index) => (
-                  <li key={index} className="flex items-start text-sm text-gray-700">
+                {service.features.map((item, idx) => (
+                  <li key={idx} className="flex items-start text-sm text-gray-700">
                     <CheckCircle className="text-blue-500 w-5 h-5 mr-2 mt-0.5" />
                     {item}
                   </li>

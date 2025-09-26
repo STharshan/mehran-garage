@@ -2,12 +2,17 @@ import { CheckCircle, CircleSlash, Target } from 'lucide-react';
 import React from 'react';
 
 export default function TyreEnd() {
-   return (
+  return (
     <section className="px-4 py-10 bg-gray-50">
       {/* Top Two Cards */}
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
         {/* Alignment Benefits */}
-        <div className="border border-blue-300 bg-blue-50 rounded-xl p-6">
+        <div
+          className="bg-blue-50 rounded-xl p-6 shadow-sm
+                     transform transition-all duration-300 ease-in-out
+                     hover:scale-105 active:scale-105 
+                     hover:shadow-[0_0_25px_5px_rgba(0,123,255,0.4)]"
+        >
           <div className="flex items-center gap-2 mb-4">
             <Target className="w-5 h-5 text-blue-600" />
             <h3 className="text-blue-700 font-semibold text-lg">
@@ -16,12 +21,12 @@ export default function TyreEnd() {
           </div>
           <ul className="space-y-2 text-sm text-gray-800">
             {[
-              "Improved fuel economy",
-              "Extended tyre life",
-              "Better vehicle handling",
-              "reduced steering effort",
-              "Safer driving experience",
-              "Prevents premature wear",
+              'Improved fuel economy',
+              'Extended tyre life',
+              'Better vehicle handling',
+              'Reduced steering effort',
+              'Safer driving experience',
+              'Prevents premature wear',
             ].map((item, i) => (
               <li key={i} className="flex items-start gap-2">
                 <CheckCircle className="w-4 h-4 text-blue-500 mt-0.5" />
@@ -32,7 +37,12 @@ export default function TyreEnd() {
         </div>
 
         {/* Tyre Health Checks */}
-        <div className="border border-blue-300 bg-blue-50 rounded-xl p-6">
+        <div
+          className="bg-blue-50 rounded-xl p-6 shadow-sm
+                     transform transition-all duration-300 ease-in-out
+                     hover:scale-105 active:scale-105 
+                     hover:shadow-[0_0_25px_5px_rgba(0,123,255,0.4)]"
+        >
           <div className="flex items-center gap-2 mb-4">
             <CircleSlash className="w-5 h-5 text-blue-600" />
             <h3 className="text-blue-700 font-semibold text-lg">
@@ -41,12 +51,12 @@ export default function TyreEnd() {
           </div>
           <ul className="space-y-2 text-sm text-gray-800">
             {[
-              "Tread depth measurement",
-              "Sidewall damage inspection",
-              "Pressure monitoring",
-              "Uneven wear patterns",
-              "Age and condition assessment",
-              "Legal compliance check",
+              'Tread depth measurement',
+              'Sidewall damage inspection',
+              'Pressure monitoring',
+              'Uneven wear patterns',
+              'Age and condition assessment',
+              'Legal compliance check',
             ].map((item, i) => (
               <li key={i} className="flex items-start gap-2">
                 <CheckCircle className="w-4 h-4 text-blue-500 mt-0.5" />
@@ -58,7 +68,13 @@ export default function TyreEnd() {
       </div>
 
       {/* Tyre Brands */}
-      <div className="max-w-7xl mx-auto bg-gradient-to-r from-blue-100 to-blue-100 rounded-xl p-6 md:p-10 text-center">
+      <div
+        className="max-w-7xl mx-auto bg-gradient-to-r from-blue-100 to-blue-100 
+                   rounded-xl p-6 md:p-10 text-center shadow-sm
+                   transform transition-all duration-300 ease-in-out
+                   hover:scale-105 active:scale-105 
+                   hover:shadow-[0_0_25px_5px_rgba(0,123,255,0.4)]"
+      >
         <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8">
           Tyre Brand We Offer
         </h2>
@@ -103,4 +119,4 @@ export default function TyreEnd() {
       </div>
     </section>
   );
-};
+}

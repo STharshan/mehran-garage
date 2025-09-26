@@ -1,13 +1,7 @@
 import React from "react";
-import {
-  CheckCircle,
-  CircleDot,
-  Radar,
-  Settings,
-} from "lucide-react";
+import { CheckCircle, CircleDot, Radar, Settings } from "lucide-react";
 
 export default function TyreServices() {
-
   return (
     <section className="px-4 py-10 bg-gray-50">
       {/* Title */}
@@ -36,7 +30,12 @@ export default function TyreServices() {
       {/* Service Cards */}
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
         {/* Card 1 */}
-        <div className="bg-white border rounded-xl p-6 shadow-sm hover:shadow-md transition">
+        <div
+          className="bg-white rounded-xl p-6 shadow-sm 
+                     transform transition-all duration-300 ease-in-out 
+                     hover:scale-105 active:scale-105 
+                     hover:shadow-[0_0_25px_5px_rgba(0,123,255,0.4)]"
+        >
           <div className="flex justify-center mb-4">
             <div className="p-3 bg-gradient-to-r from-blue-800 to-gray-900 rounded-full">
               <CircleDot className="w-8 h-8 text-white" />
@@ -65,7 +64,12 @@ export default function TyreServices() {
         </div>
 
         {/* Card 2 */}
-        <div className="bg-white border rounded-xl p-6 shadow-sm hover:shadow-md transition">
+        <div
+          className="bg-white rounded-xl p-6 shadow-sm 
+                     transform transition-all duration-300 ease-in-out 
+                     hover:scale-105 active:scale-105 
+                     hover:shadow-[0_0_25px_5px_rgba(0,123,255,0.4)]"
+        >
           <div className="flex justify-center mb-4">
             <div className="p-3 bg-gradient-to-r from-blue-800 to-gray-900 rounded-full">
               <Radar className="w-8 h-8 text-white" />
@@ -94,7 +98,12 @@ export default function TyreServices() {
         </div>
 
         {/* Card 3 */}
-        <div className="bg-white border rounded-xl p-6 shadow-sm hover:shadow-md transition">
+        <div
+          className="bg-white rounded-xl p-6 shadow-sm 
+                     transform transition-all duration-300 ease-in-out 
+                     hover:scale-105 active:scale-105 
+                     hover:shadow-[0_0_25px_5px_rgba(0,123,255,0.4)]"
+        >
           <div className="flex justify-center mb-4">
             <div className="p-3 bg-gradient-to-r from-blue-800 to-gray-900 rounded-full">
               <Settings className="w-8 h-8 text-white" />
@@ -124,7 +133,12 @@ export default function TyreServices() {
       </div>
 
       {/* High-Tech Alignment Equipment Section */}
-      <div className="max-w-7xl mx-auto bg-white border rounded-xl shadow-md p-6 md:p-10">
+      <div
+        className="max-w-7xl mx-auto bg-white rounded-xl shadow-md p-6 md:p-10
+                   transform transition-all duration-300 ease-in-out
+                   hover:scale-105 active:scale-105
+                   hover:shadow-[0_0_25px_5px_rgba(0,123,255,0.4)]"
+      >
         <h2 className="text-center text-2xl md:text-3xl font-bold text-gray-900 mb-8">
           High-Tech Alignment Equipment
         </h2>
@@ -158,5 +172,4 @@ export default function TyreServices() {
       </div>
     </section>
   );
-};
-
+}

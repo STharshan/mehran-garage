@@ -18,7 +18,10 @@ const ClutchServices = () => {
           { label: "Air Conditioning", color: "bg-blue-100 text-blue-600" },
           { label: "MOT Testing", color: "bg-blue-100 text-blue-600" },
         ].map((tag, idx) => (
-          <span key={idx} className={`px-4 py-1 text-sm font-medium rounded-full ${tag.color}`}>
+          <span
+            key={idx}
+            className={`px-4 py-1 text-sm font-medium rounded-full ${tag.color}`}
+          >
             {tag.label}
           </span>
         ))}
@@ -27,7 +30,12 @@ const ClutchServices = () => {
       {/* Cards */}
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
         {/* Clutch Replacement */}
-        <div className="bg-white border rounded-xl p-6 shadow hover:shadow-md transition">
+        <div
+          className="bg-white rounded-xl p-6 shadow-sm
+                     transform transition-all duration-300 ease-in-out
+                     hover:scale-105 active:scale-105
+                     hover:shadow-[0_0_25px_5px_rgba(0,123,255,0.4)]"
+        >
           <div className="flex justify-center mb-4">
             <div className="p-3 bg-gradient-to-r from-blue-800 to-gray-900 rounded-full">
               <CircleDashed className="w-8 h-8 text-white" />
@@ -56,7 +64,12 @@ const ClutchServices = () => {
         </div>
 
         {/* Clutch Diagnostics */}
-        <div className="bg-white border rounded-xl p-6 shadow hover:shadow-md transition">
+        <div
+          className="bg-white rounded-xl p-6 shadow-sm
+                     transform transition-all duration-300 ease-in-out
+                     hover:scale-105 active:scale-105
+                     hover:shadow-[0_0_25px_5px_rgba(0,123,255,0.4)]"
+        >
           <div className="flex justify-center mb-4">
             <div className="p-3 bg-gradient-to-r from-blue-800 to-gray-900 rounded-full">
               <Settings2 className="w-8 h-8 text-white" />
@@ -85,7 +98,12 @@ const ClutchServices = () => {
         </div>
 
         {/* Hydraulic Systems */}
-        <div className="bg-white border rounded-xl p-6 shadow hover:shadow-md transition">
+        <div
+          className="bg-white rounded-xl p-6 shadow-sm
+                     transform transition-all duration-300 ease-in-out
+                     hover:scale-105 active:scale-105
+                     hover:shadow-[0_0_25px_5px_rgba(0,123,255,0.4)]"
+        >
           <div className="flex justify-center mb-4">
             <div className="p-3 bg-gradient-to-r from-blue-800 to-gray-900 rounded-full">
               <Wrench className="w-8 h-8 text-white" />
@@ -115,10 +133,17 @@ const ClutchServices = () => {
       </div>
 
       {/* Clutch Problem Signs */}
-      <div className="max-w-7xl mx-auto bg-blue-50 border border-blue-300 rounded-xl p-6 md:p-8">
+      <div
+        className="max-w-7xl mx-auto bg-blue-50 rounded-xl p-6 md:p-8 shadow-sm
+                   transform transition-all duration-300 ease-in-out
+                   hover:scale-105 active:scale-105
+                   hover:shadow-[0_0_25px_5px_rgba(0,123,255,0.4)]"
+      >
         <div className="flex items-center gap-2 mb-4">
           <AlertTriangle className="w-5 h-5 text-blue-600" />
-          <h3 className="text-lg font-semibold text-blue-700">Clutch Problem Signs</h3>
+          <h3 className="text-lg font-semibold text-blue-700">
+            Clutch Problem Signs
+          </h3>
         </div>
         <p className="text-sm text-gray-700 mb-6">
           Don’t ignore these warning signs – clutch problems can lead to expensive transmission damage:

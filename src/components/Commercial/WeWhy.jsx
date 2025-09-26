@@ -2,19 +2,21 @@ import { CheckCircle } from "lucide-react";
 import React from "react";
 import { AiOutlineTool, AiOutlineSafety } from "react-icons/ai";
 import { IoMdSettings } from "react-icons/io";
-import { MdBuild, MdBatteryChargingFull } from "react-icons/md";
+import { MdBatteryChargingFull } from "react-icons/md";
 
 const services = [
   {
     id: 1,
     title: "Comprehensive Diagnostics",
-    description: "Advanced diagnostic tools to identify issues fast and accurately.",
+    description:
+      "Advanced diagnostic tools to identify issues fast and accurately.",
     icon: <IoMdSettings className="h-8 w-8 text-blue-600" />,
   },
   {
     id: 2,
     title: "Engine & Transmission Repairs",
-    description: "Expert repairs and replacements to keep your vans running smoothly.",
+    description:
+      "Expert repairs and replacements to keep your vans running smoothly.",
     icon: <AiOutlineTool className="h-8 w-8 text-blue-600" />,
   },
   {
@@ -32,7 +34,8 @@ const services = [
   {
     id: 5,
     title: "Routine Maintenance",
-    description: "Oil changes, fluid checks, filters, belts, and more to prevent costly breakdowns.",
+    description:
+      "Oil changes, fluid checks, filters, belts, and more to prevent costly breakdowns.",
     icon: <CheckCircle className="h-8 w-8 text-blue-600" />,
   },
 ];
@@ -43,7 +46,8 @@ const WeWhy = () => {
       <div className="container mx-auto text-black text-center">
         <h2 className="text-3xl font-semibold mb-7">What We Offer</h2>
         <p className="text-xl max-w-3xl mx-auto font-semibold mb-7">
-          Comprehensive repair and maintenance services to keep your commercial fleet running at peak performance.
+          Comprehensive repair and maintenance services to keep your commercial
+          fleet running at peak performance.
         </p>
       </div>
       <div className="container mx-auto text-center max-w-6xl">
@@ -51,13 +55,22 @@ const WeWhy = () => {
           {services.map((service) => (
             <div
               key={service.id}
-              className="flex flex-col items-start p-6 border rounded-lg shadow-md hover:shadow-xl hover:z-10 hover:scale-105 transition-all duration-300 relative"
+              className="flex flex-col items-start p-6 rounded-xl bg-white shadow-sm
+                         transform transition-all duration-300 ease-in-out
+                         hover:scale-105 active:scale-105
+                         hover:shadow-[0_0_25px_5px_rgba(0,123,255,0.35)]"
             >
               <div className="flex items-center mb-4">
-                <div className="bg-blue-100 p-3 rounded-full">{service.icon}</div>
+                <div className="bg-blue-100 p-3 rounded-full">
+                  {service.icon}
+                </div>
               </div>
-              <h3 className="text-lg sm:text-xl font-semibold mb-2">{service.title}</h3>
-              <p className="text-sm sm:text-base text-gray-700 text-left">{service.description}</p>
+              <h3 className="text-lg sm:text-xl font-semibold mb-2 text-left">
+                {service.title}
+              </h3>
+              <p className="text-sm sm:text-base text-gray-700 text-left">
+                {service.description}
+              </p>
             </div>
           ))}
         </div>

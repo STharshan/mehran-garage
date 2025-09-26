@@ -55,9 +55,9 @@ const services = [
       "SCR system communication testing",
     ],
   },
-   {
+  {
     icon: <CiSettings className="w-10 h-10 text-white" />,
-    bg: "bg-gradient-to-r from-blue-800 to-gray-900 to-gray-900",
+    bg: "bg-gradient-to-r from-blue-800 to-gray-900",
     title: "DPF Solutions",
     subtitle: "Advanced DPF system fault finding",
     items: [
@@ -72,12 +72,15 @@ const services = [
 
 const DiagnosticsServices = () => {
   return (
-    <section className="px-4 py-10 ">
+    <section className="px-4 py-10">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
         {services.map((service, index) => (
           <div
             key={index}
-            className="bg-white border border-black rounded-xl shadow-sm p-6 flex flex-col gap-4 hover:shadow-lg transition"
+            className="bg-white rounded-xl p-6 flex flex-col gap-4 
+                       transform transition-all duration-300 ease-in-out 
+                       hover:scale-105 active:scale-105 
+                       shadow-sm hover:shadow-[0_0_25px_5px_rgba(0,123,255,0.4)]"
           >
             <div className="flex items-center justify-center">
               <div className={`rounded-full p-3 ${service.bg}`}>

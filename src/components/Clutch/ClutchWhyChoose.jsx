@@ -5,7 +5,7 @@ export default function ClutchWhyChooseUs() {
   const features = [
     {
       title: 'Trusted & Reliable',
-      description: 'Years of proven experience and hundblues of satisfied customers.',
+      description: 'Years of proven experience and hundreds of satisfied customers.',
       icon: <ShieldCheck className="w-10 h-10 text-blue-600" />,
     },
     {
@@ -25,7 +25,14 @@ export default function ClutchWhyChooseUs() {
       <h2 className="text-3xl font-bold mb-12">Why Choose Us?</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
         {features.map((feature, index) => (
-          <div key={index} className="flex flex-col items-center text-center px-4">
+          <div
+            key={index}
+            className="flex flex-col items-center text-center px-6 py-8 
+                       bg-white rounded-xl shadow-md 
+                       transform transition-all duration-300 ease-in-out
+                       hover:scale-105 active:scale-105 
+                       hover:shadow-[0_0_25px_5px_rgba(0,123,255,0.4)]"
+          >
             <div className="mb-4">{feature.icon}</div>
             <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
             <p className="text-gray-600">{feature.description}</p>

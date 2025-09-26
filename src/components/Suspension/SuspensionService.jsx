@@ -36,7 +36,12 @@ const SuspensionServices = () => {
       {/* Service Cards */}
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
         {/* Card 1: Shock Absorbers */}
-        <div className="bg-white border rounded-xl p-6 shadow-sm hover:shadow-md transition">
+        <div
+          className="bg-white rounded-xl p-6 shadow-sm 
+                     transform transition-all duration-300 ease-in-out
+                     hover:scale-105 active:scale-105 
+                     hover:shadow-[0_0_25px_5px_rgba(0,123,255,0.4)]"
+        >
           <div className="flex justify-center mb-4">
             <div className="p-3 bg-gradient-to-r from-blue-800 to-gray-900 rounded-full">
               <Activity className="w-8 h-8 text-white" />
@@ -65,7 +70,12 @@ const SuspensionServices = () => {
         </div>
 
         {/* Card 2: Springs & Coils */}
-        <div className="bg-white border rounded-xl p-6 shadow-sm hover:shadow-md transition">
+        <div
+          className="bg-white rounded-xl p-6 shadow-sm 
+                     transform transition-all duration-300 ease-in-out
+                     hover:scale-105 active:scale-105 
+                     hover:shadow-[0_0_25px_5px_rgba(0,123,255,0.4)]"
+        >
           <div className="flex justify-center mb-4">
             <div className="p-3 bg-gradient-to-r from-blue-800 to-gray-900 rounded-full">
               <Car className="w-8 h-8 text-white" />
@@ -94,7 +104,12 @@ const SuspensionServices = () => {
         </div>
 
         {/* Card 3: Suspension Components */}
-        <div className="bg-white border rounded-xl p-6 shadow-sm hover:shadow-md transition">
+        <div
+          className="bg-white rounded-xl p-6 shadow-sm 
+                     transform transition-all duration-300 ease-in-out
+                     hover:scale-105 active:scale-105 
+                     hover:shadow-[0_0_25px_5px_rgba(0,123,255,0.4)]"
+        >
           <div className="flex justify-center mb-4">
             <div className="p-3 bg-gradient-to-r from-blue-800 to-gray-900 rounded-full">
               <Wrench className="w-8 h-8 text-white" />
