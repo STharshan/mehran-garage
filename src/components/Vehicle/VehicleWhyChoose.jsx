@@ -1,21 +1,23 @@
-import React from 'react';
-import { ShieldCheck, Wrench, Users } from 'lucide-react'; // Lucide icons
+import React, { useState } from "react";
+import { ShieldCheck, Wrench, Users } from "lucide-react";
 
 export default function VehicleWhyChooseUs() {
+  const [activeIndex, setActiveIndex] = useState(null);
+
   const features = [
     {
-      title: 'Trusted & Reliable',
-      description: 'Years of proven experience and hundreds of satisfied customers.',
+      title: "Trusted & Reliable",
+      description: "Years of proven experience and hundreds of satisfied customers.",
       icon: <ShieldCheck className="w-10 h-10 text-blue-600" />,
     },
     {
-      title: 'Expert Technicians',
-      description: 'Certified mechanics delivering precise and high-quality service.',
+      title: "Expert Technicians",
+      description: "Certified mechanics delivering precise and high-quality service.",
       icon: <Wrench className="w-10 h-10 text-blue-500" />,
     },
     {
-      title: 'Customer-Centric',
-      description: 'We care about your satisfaction and aim to exceed expectations.',
+      title: "Customer-Centric",
+      description: "We care about your satisfaction and aim to exceed expectations.",
       icon: <Users className="w-10 h-10 text-blue-600" />,
     },
   ];
@@ -27,10 +29,9 @@ export default function VehicleWhyChooseUs() {
         {features.map((feature, index) => (
           <div
             key={index}
-            className="bg-white rounded-xl p-8 shadow-md transition-all duration-300 ease-in-out
-            hover:scale-105 hover:shadow-[0_0_25px_5px_rgba(59,130,246,0.7)]
-            active:scale-95 active:shadow-[0_0_30px_6px_rgba(59,130,246,0.9)]
-            flex flex-col items-center text-center"
+            onClick={() => setActiveIndex(index)}
+            className={`bg-white rounded-xl p-8 shadow-md transition-all duration-300 ease-in-out flex flex-col items-center text-center cursor-pointer
+            ${activeIndex === index ? "scale-105 shadow-[0_0_25px_5px_rgba(59,130,246,0.7)]" : "hover:scale-105 hover:shadow-[0_0_25px_5px_rgba(59,130,246,0.7)]"}`}
           >
             <div className="mb-4">{feature.icon}</div>
             <h3 className="text-lg text-black font-semibold mb-2">{feature.title}</h3>
