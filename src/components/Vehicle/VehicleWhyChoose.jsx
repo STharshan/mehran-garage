@@ -27,7 +27,7 @@ export default function VehicleWhyChooseUs() {
         {features.map((feature, index) => (
           <div
             key={index}
-            className="bg-white rounded-xl p-8 shadow-md transition-all duration-300 ease-in-out
+             className="bg-white rounded-xl p-8 shadow-md transition-all duration-300 ease-in-out 
             hover:scale-105 hover:shadow-[0_0_25px_5px_rgba(59,130,246,0.7)]
             active:scale-95 active:shadow-[0_0_30px_6px_rgba(59,130,246,0.9)]
             flex flex-col items-center text-center"

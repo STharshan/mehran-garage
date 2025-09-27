@@ -27,10 +27,10 @@ export default function TimingWhyChooseUs() {
         {features.map((feature, index) => (
           <div
             key={index}
-            className="flex flex-col items-center text-center px-4 py-6 rounded-xl bg-white shadow-sm
-                       transform transition-all duration-300 ease-in-out
-                       hover:scale-105 active:scale-105
-                       hover:shadow-[0_0_25px_5px_rgba(0,123,255,0.35)]"
+            className="bg-white rounded-xl p-8 shadow-md transition-all duration-300 ease-in-out 
+            hover:scale-105 hover:shadow-[0_0_25px_5px_rgba(59,130,246,0.7)]
+            active:scale-95 active:shadow-[0_0_30px_6px_rgba(59,130,246,0.9)]
+            flex flex-col items-center text-center"
           >
             <div className="mb-4">{feature.icon}</div>
             <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>

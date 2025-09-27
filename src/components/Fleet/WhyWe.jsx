@@ -64,10 +64,10 @@ const WhyWe = () => {
           {services.map((service) => (
             <div
               key={service.id}
-              className="flex flex-col items-start p-6 rounded-xl bg-white shadow-sm 
-                         transform transition-all duration-300 ease-in-out
-                         hover:scale-105 active:scale-105
-                         hover:shadow-[0_0_25px_5px_rgba(0,123,255,0.35)]"
+             className="bg-white rounded-xl p-8 shadow-md transition-all duration-300 ease-in-out 
+            hover:scale-105 hover:shadow-[0_0_25px_5px_rgba(59,130,246,0.7)]
+            active:scale-95 active:shadow-[0_0_30px_6px_rgba(59,130,246,0.9)]
+            flex flex-col items-center text-center"
             >
               <div className="flex items-center mb-4">
                 <div className="bg-blue-100 p-3 rounded-full">{service.icon}</div>
