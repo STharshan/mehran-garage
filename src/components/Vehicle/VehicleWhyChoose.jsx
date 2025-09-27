@@ -22,6 +22,11 @@ export default function VehicleWhyChooseUs() {
     },
   ];
 
+  // ✅ toggle activeIndex when clicking
+  const handleClick = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
+
   return (
     <div className="py-16 px-4 text-center">
       <h2 className="text-3xl font-bold mb-12 text-black">Why Choose Us?</h2>
@@ -29,9 +34,14 @@ export default function VehicleWhyChooseUs() {
         {features.map((feature, index) => (
           <div
             key={index}
-            onClick={() => setActiveIndex(index)}
-            className={`bg-white rounded-xl p-8 shadow-md transition-all duration-300 ease-in-out flex flex-col items-center text-center cursor-pointer
-            ${activeIndex === index ? "scale-105 shadow-[0_0_25px_5px_rgba(59,130,246,0.7)]" : "hover:scale-105 hover:shadow-[0_0_25px_5px_rgba(59,130,246,0.7)]"}`}
+            onClick={() => handleClick(index)}
+            className={`bg-white rounded-xl p-8 shadow-md transition-all duration-300 ease-in-out 
+              flex flex-col items-center text-center cursor-pointer
+              ${
+                activeIndex === index
+                  ? "scale-105 shadow-[0_0_25px_5px_rgba(59,130,246,0.9)]" // 👈 Mobile tap (active)
+                  : "hover:scale-105 hover:shadow-[0_0_25px_5px_rgba(59,130,246,0.7)]" // 👈 Desktop hover
+              }`}
           >
             <div className="mb-4">{feature.icon}</div>
             <h3 className="text-lg text-black font-semibold mb-2">{feature.title}</h3>
