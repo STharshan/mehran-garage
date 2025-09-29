@@ -3,51 +3,50 @@ import { CheckCircle, CircleDot, Radar, Settings } from "lucide-react";
 
 export default function TyreServices() {
   return (
-    <section className="px-4 py-10 bg-gray-50">
+    <section className="px-6 py-16 bg-gray-50">
       {/* Title */}
-      <h2 className="text-center text-3xl font-bold text-gray-900 mb-6">
+      <h2 className="text-center text-4xl font-extrabold text-gray-900 mb-10">
         Our Services
       </h2>
 
       {/* Category Tags */}
-      <div className="flex flex-wrap justify-center gap-3 mb-10">
+      <div className="flex flex-wrap justify-center gap-4 mb-14">
         {[
-          { label: "Engine Diagnostics", color: "bg-blue-100 text-blue-600" },
-          { label: "Brake Repair", color: "bg-blue-100 text-blue-600" },
-          { label: "Oil Change", color: "bg-blue-100 text-blue-600" },
-          { label: "Air Conditioning", color: "bg-blue-100 text-blue-600" },
-          { label: "MOT Testing", color: "bg-blue-100 text-blue-600" },
+          "Engine Diagnostics",
+          "Brake Repair",
+          "Oil Change",
+          "Air Conditioning",
+          "MOT Testing",
         ].map((tag, index) => (
           <span
             key={index}
-            className={`px-4 py-1 text-sm font-medium rounded-full ${tag.color}`}
+            className="px-5 py-2 text-base font-medium rounded-full bg-blue-100 text-blue-700"
           >
-            {tag.label}
+            {tag}
           </span>
         ))}
       </div>
 
       {/* Service Cards */}
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 mb-14">
         {/* Card 1 */}
         <div
-          className="bg-white rounded-xl p-6 shadow-sm 
+          className="bg-white rounded-xl p-10 shadow-md 
                      transform transition-all duration-300 ease-in-out 
-                     hover:scale-105 active:scale-105 
-                     hover:shadow-[0_0_25px_5px_rgba(0,123,255,0.4)]"
+                     hover:scale-105 hover:shadow-[0_0_25px_5px_rgba(59,130,246,0.4)]"
         >
-          <div className="flex justify-center mb-4">
-            <div className="p-3 bg-gradient-to-r from-blue-800 to-gray-900 rounded-full">
+          <div className="flex justify-center mb-6">
+            <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center">
               <CircleDot className="w-8 h-8 text-white" />
             </div>
           </div>
-          <h3 className="text-center font-semibold text-lg text-gray-800">
+          <h3 className="text-center font-bold text-2xl text-gray-800 mb-2">
             Tyre Fitting
           </h3>
-          <p className="text-center text-sm text-gray-500 mb-4">
+          <p className="text-center text-base text-gray-600 mb-6">
             Professional tyre supply and fitting service
           </p>
-          <ul className="space-y-2 text-sm text-gray-700">
+          <ul className="space-y-3 text-base text-gray-700">
             {[
               "Premium brand tyres",
               "Budget tyre options",
@@ -56,7 +55,7 @@ export default function TyreServices() {
               "Wheel balancing",
             ].map((item, i) => (
               <li key={i} className="flex items-start gap-2">
-                <CheckCircle className="w-4 h-4 text-blue-500 mt-0.5" />
+                <CheckCircle className="w-5 h-5 text-blue-500 mt-0.5" />
                 <span>{item}</span>
               </li>
             ))}
@@ -65,23 +64,22 @@ export default function TyreServices() {
 
         {/* Card 2 */}
         <div
-          className="bg-white rounded-xl p-6 shadow-sm 
+          className="bg-white rounded-xl p-10 shadow-md 
                      transform transition-all duration-300 ease-in-out 
-                     hover:scale-105 active:scale-105 
-                     hover:shadow-[0_0_25px_5px_rgba(0,123,255,0.4)]"
+                     hover:scale-105 hover:shadow-[0_0_25px_5px_rgba(59,130,246,0.4)]"
         >
-          <div className="flex justify-center mb-4">
-            <div className="p-3 bg-gradient-to-r from-blue-800 to-gray-900 rounded-full">
+          <div className="flex justify-center mb-6">
+            <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center">
               <Radar className="w-8 h-8 text-white" />
             </div>
           </div>
-          <h3 className="text-center font-semibold text-lg text-gray-800">
+          <h3 className="text-center font-bold text-2xl text-gray-800 mb-2">
             Wheel Alignment
           </h3>
-          <p className="text-center text-sm text-gray-500 mb-4">
+          <p className="text-center text-base text-gray-600 mb-6">
             High tech precision wheel alignment service
           </p>
-          <ul className="space-y-2 text-sm text-gray-700">
+          <ul className="space-y-3 text-base text-gray-700">
             {[
               "4-wheel laser alignment",
               "Toe, camber, and caster adjustment",
@@ -90,7 +88,7 @@ export default function TyreServices() {
               "Alignment reports",
             ].map((item, i) => (
               <li key={i} className="flex items-start gap-2">
-                <CheckCircle className="w-4 h-4 text-blue-500 mt-0.5" />
+                <CheckCircle className="w-5 h-5 text-blue-500 mt-0.5" />
                 <span>{item}</span>
               </li>
             ))}
@@ -99,23 +97,22 @@ export default function TyreServices() {
 
         {/* Card 3 */}
         <div
-          className="bg-white rounded-xl p-6 shadow-sm 
+          className="bg-white rounded-xl p-10 shadow-md 
                      transform transition-all duration-300 ease-in-out 
-                     hover:scale-105 active:scale-105 
-                     hover:shadow-[0_0_25px_5px_rgba(0,123,255,0.4)]"
+                     hover:scale-105 hover:shadow-[0_0_25px_5px_rgba(59,130,246,0.4)]"
         >
-          <div className="flex justify-center mb-4">
-            <div className="p-3 bg-gradient-to-r from-blue-800 to-gray-900 rounded-full">
+          <div className="flex justify-center mb-6">
+            <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center">
               <Settings className="w-8 h-8 text-white" />
             </div>
           </div>
-          <h3 className="text-center font-semibold text-lg text-gray-800">
+          <h3 className="text-center font-bold text-2xl text-gray-800 mb-2">
             Wheel Services
           </h3>
-          <p className="text-center text-sm text-gray-500 mb-4">
+          <p className="text-center text-base text-gray-600 mb-6">
             Complete wheel repair and maintenance
           </p>
-          <ul className="space-y-2 text-sm text-gray-700">
+          <ul className="space-y-3 text-base text-gray-700">
             {[
               "Alloy wheel refurbishment",
               "Wheel rim repair",
@@ -124,7 +121,7 @@ export default function TyreServices() {
               "Custom wheel fitting",
             ].map((item, i) => (
               <li key={i} className="flex items-start gap-2">
-                <CheckCircle className="w-4 h-4 text-blue-500 mt-0.5" />
+                <CheckCircle className="w-5 h-5 text-blue-500 mt-0.5" />
                 <span>{item}</span>
               </li>
             ))}
@@ -134,18 +131,19 @@ export default function TyreServices() {
 
       {/* High-Tech Alignment Equipment Section */}
       <div
-        className="max-w-7xl mx-auto bg-white rounded-xl shadow-md p-6 md:p-10
+        className="max-w-7xl mx-auto bg-white rounded-xl shadow-md p-10
                    transform transition-all duration-300 ease-in-out
-                   hover:scale-105 active:scale-105
-                   hover:shadow-[0_0_25px_5px_rgba(0,123,255,0.4)]"
+                   hover:scale-105 hover:shadow-[0_0_25px_5px_rgba(59,130,246,0.4)]"
       >
-        <h2 className="text-center text-2xl md:text-3xl font-bold text-gray-900 mb-8">
+        <h2 className="text-center text-3xl font-bold text-gray-900 mb-8">
           High-Tech Alignment Equipment
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 text-sm md:text-base">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 text-base">
           {/* Left: Technology */}
           <div>
-            <h3 className="text-blue-700 font-semibold mb-3">Advanced Technology</h3>
+            <h3 className="text-blue-700 font-semibold mb-3">
+              Advanced Technology
+            </h3>
             <ul className="list-disc list-inside space-y-2 text-gray-700">
               <li>3D laser alignment system</li>
               <li>Computer-controlled measurements</li>
@@ -158,7 +156,9 @@ export default function TyreServices() {
 
           {/* Right: Parameters */}
           <div>
-            <h3 className="text-blue-600 font-semibold mb-3">Alignment Parameters</h3>
+            <h3 className="text-blue-700 font-semibold mb-3">
+              Alignment Parameters
+            </h3>
             <ul className="list-disc list-inside space-y-2 text-gray-700">
               <li>Toe angle adjustment</li>
               <li>Camber angle correction</li>

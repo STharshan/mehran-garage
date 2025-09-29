@@ -4,8 +4,7 @@ import { CiSettings } from "react-icons/ci";
 
 const services = [
   {
-    icon: <Cpu className="w-10 h-10 text-white" />,
-    bg: "bg-gradient-to-r from-blue-800 to-gray-900",
+    icon: Cpu,
     title: "Engine Diagnostics",
     subtitle: "Comprehensive engine fault finding and analysis",
     items: [
@@ -17,8 +16,7 @@ const services = [
     ],
   },
   {
-    icon: <Laptop2 className="w-10 h-10 text-white" />,
-    bg: "bg-gradient-to-r from-blue-800 to-gray-900",
+    icon: Laptop2,
     title: "ECU Programming",
     subtitle: "Software updates and ECU reprogramming services",
     items: [
@@ -30,8 +28,7 @@ const services = [
     ],
   },
   {
-    icon: <Server className="w-10 h-10 text-white" />,
-    bg: "bg-gradient-to-r from-blue-800 to-gray-900",
+    icon: Server,
     title: "Dealer Level Access",
     subtitle: "Professional diagnostic tools with manufacturer access",
     items: [
@@ -43,8 +40,7 @@ const services = [
     ],
   },
   {
-    icon: <Zap className="w-10 h-10 text-white" />,
-    bg: "bg-gradient-to-r from-blue-800 to-gray-900",
+    icon: Zap,
     title: "AdBlue Solutions",
     subtitle: "Advanced AdBlue system fault finding",
     items: [
@@ -56,8 +52,7 @@ const services = [
     ],
   },
   {
-    icon: <CiSettings className="w-10 h-10 text-white" />,
-    bg: "bg-gradient-to-r from-blue-800 to-gray-900",
+    icon: CiSettings,
     title: "DPF Solutions",
     subtitle: "Advanced DPF system fault finding",
     items: [
@@ -72,37 +67,40 @@ const services = [
 
 const DiagnosticsServices = () => {
   return (
-    <section className="px-4 py-10">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
-        {services.map((service, index) => (
-          <div
-            key={index}
-            className="bg-white rounded-xl p-6 flex flex-col gap-4 
-                       transform transition-all duration-300 ease-in-out 
-                       hover:scale-105 active:scale-105 
-                       shadow-sm hover:shadow-[0_0_25px_5px_rgba(0,123,255,0.4)]"
-          >
-            <div className="flex items-center justify-center">
-              <div className={`rounded-full p-3 ${service.bg}`}>
-                {service.icon}
+    <section className="px-6 py-16">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
+        {services.map((service, index) => {
+          const Icon = service.icon;
+          return (
+            <div
+              key={index}
+              className="bg-white rounded-xl p-10 flex flex-col gap-4 
+                         transform transition-all duration-300 ease-in-out 
+                         hover:scale-105 active:scale-100 
+                         shadow-md hover:shadow-[0_0_25px_5px_rgba(59,130,246,0.4)]"
+            >
+              <div className="flex items-center justify-center">
+                <div className="w-16 h-16 rounded-full bg-blue-600 flex items-center justify-center mb-3">
+                  <Icon className="w-8 h-8 text-white" />
+                </div>
               </div>
+              <h3 className="text-center text-2xl font-bold text-gray-800">
+                {service.title}
+              </h3>
+              <p className="text-base text-center text-gray-600">
+                {service.subtitle}
+              </p>
+              <ul className="mt-4 space-y-3 text-base text-gray-700">
+                {service.items.map((item, i) => (
+                  <li key={i} className="flex items-start gap-2">
+                    <CheckCircle className="w-5 h-5 text-blue-500 mt-0.5" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
-            <h3 className="text-center text-lg font-semibold text-gray-800">
-              {service.title}
-            </h3>
-            <p className="text-sm text-center text-gray-500">
-              {service.subtitle}
-            </p>
-            <ul className="mt-2 space-y-2 text-sm text-gray-700">
-              {service.items.map((item, i) => (
-                <li key={i} className="flex items-start gap-2">
-                  <CheckCircle className="w-5 h-5 text-blue-500 mt-0.5" />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </section>
   );

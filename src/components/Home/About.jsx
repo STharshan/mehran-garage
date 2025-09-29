@@ -14,7 +14,7 @@ const AboutUs = () => {
   }, []);
 
     return (
-        <section className="scroll-m-25 bg-black py-10" id="about">
+        <section className="scroll-m-25 bg-black py-10 px-0 md:px-12" id="about">
             <div className="flex flex-col-reverse md:flex-row items-center p-6">
                 <div
                     className="md:w-1/2 p-4"
