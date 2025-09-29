@@ -75,7 +75,7 @@ const HeroSection = () => {
                 className="inline-block bg-green-600 hover:bg-green-700 text-white py-2 px-3 rounded-md font-semibold sm:text-lg transition-transform hover:-translate-y-0.5 active:scale-95"
                 data-aos="fade-up"
               >
-                Whatsapp Us
+                WhatsApp Us
               </a>
             </div>
           </div>
