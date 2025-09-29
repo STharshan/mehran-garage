@@ -4,10 +4,10 @@ export default function BrakeEnd() {
   return (
     <section className="px-4 py-10 bg-gray-50">
       {/* Brake Service Process */}
-      <div className="max-w-7xl mx-auto bg-white rounded-xl shadow-md p-6 md:p-10 mb-10">
         <h2 className="text-center text-2xl md:text-3xl font-bold text-gray-900 mb-8">
           Brake Service Process
         </h2>
+      <div className="max-w-7xl mx-auto ">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
           {[
             {
@@ -39,7 +39,8 @@ export default function BrakeEnd() {
               titleColor: "text-blue-500",
             },
           ].map((step, index) => (
-            <div key={index} className="flex flex-col items-center gap-2">
+            <div key={index} className="flex flex-col items-center gap-2 bg-white rounded-xl shadow-md p-6 md:p-10   hover:scale-105 active:scale-105 
+                     hover:shadow-[0_0_25px_5px_rgba(0,123,255,0.4)] duration-300 mb-10">
               <div className={`w-10 h-10 rounded-full text-white font-semibold flex items-center justify-center ${step.color}`}>
                 {step.number}
               </div>
@@ -51,14 +52,15 @@ export default function BrakeEnd() {
       </div>
 
       {/* Brake Maintenance Tips */}
-      <div className="max-w-7xl mx-auto bg-gradient-to-r from-blue-100 to-blue-100 rounded-xl p-6 md:p-10">
         <h2 className="text-center text-2xl md:text-3xl font-bold text-gray-900 mb-8">
           Brake Maintenance Tips
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 text-sm md:text-base">
+      <div className="max-w-5xl mx-auto ">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 text-sm md:text-base ">
           {/* Regular Checks */}
-          <div>
-            <h3 className="text-blue-700 font-semibold mb-3">Regular Checks</h3>
+          <div className='rounded-xl shadow-md p-6 bg-gradient-to-r from-blue-100 to-blue-100   hover:scale-105 active:scale-105 
+                     hover:shadow-[0_0_25px_5px_rgba(0,123,255,0.4)] duration-300'>
+            <h3 className="text-blue-700 font-semibold mb-3 text-center">Regular Checks</h3>
             <ul className="list-disc list-inside space-y-2 text-gray-700">
               <li>Check brake fluid level monthly</li>
               <li>Listen for unusual brake noises</li>
@@ -68,8 +70,8 @@ export default function BrakeEnd() {
           </div>
 
           {/* Driving Tips */}
-          <div>
-            <h3 className="text-blue-600 font-semibold mb-3">Driving Tips</h3>
+          <div className='rounded-xl shadow-md p-6 bg-gradient-to-r from-blue-100 to-blue-100   hover:scale-105 active:scale-105'>
+            <h3 className="text-blue-600 font-semibold mb-3 text-center">Driving Tips</h3>
             <ul className="list-disc list-inside space-y-2 text-gray-700">
               <li>Avoid harsh braking when possible</li>
               <li>Allow brakes to cool on long descents</li>

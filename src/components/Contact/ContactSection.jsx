@@ -118,12 +118,12 @@ export default function ContactSection() {
       Message: ${message}
       Service Requested: ${selectedService}
     `;
-    
+
     // URL encode the message text
     const encodedMessage = encodeURIComponent(messageText);
 
     // WhatsApp phone number
-    const whatsappNumber = "447846953888"; // Use the number to which messages are to be sent
+    const whatsappNumber = "+447846953888"; // Use the number to which messages are to be sent
 
     // Construct WhatsApp URL
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
@@ -159,18 +159,20 @@ export default function ContactSection() {
             </h3>
             <div className="mt-4 space-y-6 text-gray-600 dark:text-gray-300">
               <div>
-                <p className="font-medium dark:text-gray-200">Address</p>
-                <address className="not-italic">
-                  29 Church St, Old Basford
-                  <br />
-                  Nottingham NG6 0GA
-                  United Kingdom
-                </address>
+                <a  href="https://www.google.com/maps?q=29+Church+St,+Old+Basford,+Nottingham+NG6+0GA+United+Kingdom">
+                  <p className="font-medium dark:text-gray-200">Address</p>
+                  <address className="not-italic hover:underline">
+                    29 Church St, Old Basford
+                    <br />
+                    Nottingham NG6 0GA
+                    United Kingdom
+                  </address>
+                </a>
               </div>
 
               <div>
                 <p className="font-medium">Phone</p>
-                <a href="tel:+447989668752" className="hover:underline text-blue-600">
+                <a href="tel: +447846 953888" className="hover:underline text-gray-600">
                   07846 953888
                 </a>
               </div>

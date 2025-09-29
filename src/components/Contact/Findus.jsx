@@ -21,7 +21,8 @@ const FindUs = () => {
         </h2>
 
         <div
-          className="rounded-lg overflow-hidden shadow-lg w-full h-[400px]"
+          className="rounded-lg overflow-hidden shadow-sm w-full h-[400px]  
+                     hover:shadow-[0_0_25px_5px_rgba(0,123,255,0.4)] active:shadow-[0_0_25px_5px_rgba(0,123,255,0.4)]"
           data-aos="fade-up" // AOS animation for the iframe container
         >
           <iframe

@@ -35,13 +35,14 @@ export default function ClutchEnd() {
   return (
     <section className="px-4 py-10 bg-gray-50">
       {/* Clutch Replacement Process */}
-      <div className="max-w-7xl mx-auto bg-white rounded-xl shadow p-6 mb-10">
         <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-6">
           Clutch Replacement Process
         </h2>
+      <div className="max-w-7xl mx-auto ">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
           {steps.map((s, i) => (
-            <div key={i}>
+            <div key={i} className='bg-white rounded-xl shadow p-6 mb-10 hover:scale-105 hover:shadow-[0_0_25px_5px_rgba(59,130,246,0.7)]
+            active:scale-95 active:shadow-[0_0_30px_6px_rgba(59,130,246,0.9)]" duration-300'>
               <div className={`w-12 h-12 mx-auto flex items-center justify-center rounded-full text-white text-lg font-bold ${s.bg}`}>
                 {s.step}
               </div>

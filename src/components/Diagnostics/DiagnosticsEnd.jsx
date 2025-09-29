@@ -4,10 +4,10 @@ export default function DiagnosticsEnd() {
   return (
     <section className="px-4 py-10 bg-gray-50">
       {/* Section 2: Why Choose Us */}
-      <div className="max-w-7xl mx-auto mt-10 p-8 rounded-xl bg-gradient-to-r from-blue-100 to-white text-center">
-        <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-6">
+        <h2 className="text-xl md:text-2xl text-center font-bold text-gray-900">
           Why Choose Our Diagnostics?
         </h2>
+      <div className="max-w-7xl mx-auto mt-5 p-8 rounded-xl bg-gradient-to-r from-blue-100 to-white text-center">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-sm md:text-base">
           <div>
             <h3 className="text-blue-700 font-semibold mb-2">Dealer Level Access</h3>
