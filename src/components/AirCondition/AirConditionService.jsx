@@ -1,11 +1,11 @@
-import React from 'react';
-import { CheckCircle, Snowflake, Wind } from 'lucide-react'; // better suited icons
+import React from "react";
+import { CheckCircle, Snowflake, Wind } from "lucide-react";
 
 const services = [
   {
     title: "Standard Air Con Re-Gas",
     subtitle: "For vehicles manufactured before 2017 using R134a gas",
-    icon: Snowflake, // ❄️ Cooling icon
+    icon: Snowflake,
     features: [
       "Refrigerant refill & top-up",
       "Pressure & temperature checks",
@@ -20,7 +20,7 @@ const services = [
   {
     title: "New Generation Air Con Re-Gas",
     subtitle: "For vehicles manufactured after 2017 using R1234yf gas",
-    icon: Wind, // 🌬️ Fresh air flow icon
+    icon: Wind,
     features: [
       "Advanced refrigerant refill & calibration",
       "Full system pressure & leak testing",
@@ -36,7 +36,7 @@ const services = [
 
 export default function AirConditionServices() {
   return (
-    <section className="bg-gradient-to-b from-white via-blue-50 to-rose-50 py-20 px-6">
+    <section className="bg-white py-20 px-6">
       <div className="max-w-7xl mx-auto text-center">
         {/* Title */}
         <h2 className="text-4xl font-extrabold text-gray-900 mb-12">
@@ -64,7 +64,7 @@ export default function AirConditionServices() {
             return (
               <div
                 key={index}
-                className="bg-white rounded-xl p-10 text-left shadow-md 
+                className="bg-blue-50 rounded-xl p-10 text-left shadow-md 
                            transform transition-all duration-300 ease-in-out 
                            hover:scale-105 hover:shadow-[0_0_25px_5px_rgba(59,130,246,0.4)]"
               >
