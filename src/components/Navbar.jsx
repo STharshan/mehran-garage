@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { FaChevronDown, FaBars } from "react-icons/fa"; // Importing required React Icons
+import { FaChevronDown, FaBars, FaTimes } from "react-icons/fa"; // Importing required React Icons
 import { HashLink } from "react-router-hash-link";
 
 const Navbar = () => {
@@ -68,7 +68,7 @@ const Navbar = () => {
             </div>
           )}
 
-          <HashLink smooth  to="/#about" className="hover:text-gray-300 text-lg">
+          <HashLink smooth to="/#about" className="hover:text-gray-300 text-lg">
             About Us
           </HashLink>
           <a href="/contact" className="hover:text-gray-300 text-lg">
@@ -89,8 +89,8 @@ const Navbar = () => {
 
         {/* Mobile menu icon */}
         <div className="md:hidden flex items-center">
-          <button onClick={toggleMenu} className="text-white">
-            <FaBars className="h-6 w-6" />
+          <button onClick={toggleMenu} className="text-white text-2xl">
+            {isMobileMenuOpen ? <FaTimes className="h-6 w-6" /> : <FaBars className="h-6 w-6" />}
           </button>
         </div>
       </div>
@@ -108,7 +108,7 @@ const Navbar = () => {
             >
               Services
               <FaChevronDown
-                className={`h-4 w-4 ml-1 mt-2.5 transition-transform duration-200 ${isServicesVisible ? 'transform rotate-180' : ''}`}
+                className={`h-4 w-4 ml-1 mt-2 transition-transform duration-200 ${isServicesVisible ? 'transform rotate-180' : ''}`}
               />
             </button>
           </div>
