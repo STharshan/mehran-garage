@@ -1,5 +1,5 @@
 // src/components/HeroSection.jsx
-import React, { useEffect,  useRef  } from "react";
+import React, { useEffect, useRef } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css"; // Import AOS styles
 
@@ -15,7 +15,7 @@ const HeroSection = () => {
       once: true, // Animate only once
     });
 
-        // Scroll to the About section if the page is loaded with hash #about
+    // Scroll to the About section if the page is loaded with hash #about
     if (window.location.hash === "#home" && homeRef.current) {
       homeRef.current.scrollIntoView({ behavior: "smooth" });
     }
@@ -23,7 +23,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <div className="relative w-full h-150 bg-black dark:bg-gray-900" id="home"  ref={homeRef}>
+    <div className="relative w-full h-150 bg-black dark:bg-gray-900" id="home" ref={homeRef}>
       {/* Background Video */}
       <video
         className="absolute inset-0 w-full h-full object-cover"
@@ -57,13 +57,28 @@ const HeroSection = () => {
             state-of-the-art testing equipment and dealer-level diagnostic
             capabilities.
           </p>
-          <a
-            href="tel:07846953888"
-            className="inline-block bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white py-3 px-6 rounded-md text-base sm:text-lg md:text-xl transition-transform hover:-translate-y-0.5 active:scale-95"
-            data-aos="fade-up"
-          >
-            Call +44 7846 953888 Today
-          </a>
+          <div className="gap-5 flex justify-center ">
+            <div>
+              <a
+                href="tel:07846953888"
+                className="inline-block bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white py-3 px-6 rounded-md text-base sm:text-lg md:text-xl transition-transform hover:-translate-y-0.5 active:scale-95"
+                data-aos="fade-up"
+              >
+                Call +44 7846 953888 Today
+              </a>
+            </div>
+            <div>
+              <a
+                href="https://wa.me/447846953888" // Use full international format without + or dashes
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-green-600 hover:bg-green-700 text-white py-3 px-6 rounded-md text-base sm:text-lg md:text-xl transition-transform hover:-translate-y-0.5 active:scale-95"
+                data-aos="fade-up"
+              >
+                Whatsapp Us
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>

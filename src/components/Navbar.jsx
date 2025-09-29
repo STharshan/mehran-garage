@@ -56,14 +56,14 @@ const Navbar = () => {
           {isServicesVisible && (
             <div className="absolute top-full right-0 mt-2 w-56 bg-white text-black shadow-md rounded-md z-50">
               {serviceLinks.map((service) => (
-                <Link
+                <HashLink
                   key={service.label}
                   to={service.path}
                   className="block px-5 py-2 mt-2 hover:bg-gray-200 hover:rounded-lg"
                   onClick={() => setIsServicesVisible(false)} // Close the menu on click
                 >
                   {service.label}
-                </Link>
+                </HashLink>
               ))}
             </div>
           )}
