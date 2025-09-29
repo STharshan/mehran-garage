@@ -57,11 +57,11 @@ const HeroSection = () => {
             state-of-the-art testing equipment and dealer-level diagnostic
             capabilities.
           </p>
-          <div className="gap-5 flex justify-center ">
+          <div className="gap-3 flex justify-center ">
             <div>
               <a
                 href="tel:07846953888"
-                className="inline-block bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white py-2 px-4 rounded-md text-lg font-semibold transition-transform hover:-translate-y-0.5 active:scale-95"
+                className="inline-block bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white py-2 px-3 rounded-md sm:text-lg font-semibold transition-transform hover:-translate-y-0.5 active:scale-95"
                 data-aos="fade-up"
               >
                 Call +44 7846 953888 Today
@@ -72,7 +72,7 @@ const HeroSection = () => {
                 href="https://wa.me/447846953888" // Use full international format without + or dashes
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block bg-green-600 hover:bg-green-700 text-white py-2 px-3 rounded-md text-lg font-semibold transition-transform hover:-translate-y-0.5 active:scale-95"
+                className="inline-block bg-green-600 hover:bg-green-700 text-white py-2 px-3 rounded-md font-semibold sm:text-lg transition-transform hover:-translate-y-0.5 active:scale-95"
                 data-aos="fade-up"
               >
                 Whatsapp Us
