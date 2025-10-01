@@ -32,7 +32,7 @@ export default function AirConditonEnd() {
     <section className="bg-gradient-to-b from-white via-blue-50 to-white py-16 px-4">
       <div className="max-w-7xl mx-auto rounded-xl shadow-md p-8 md:p-12">
         <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-10">
-          Why Choose Mehran Garages for Air Conditioning?
+          Why Choose Mehran’s Garage for Air Conditioning?
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

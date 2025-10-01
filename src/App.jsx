@@ -17,11 +17,12 @@ import TermsConditions from "./components/Term";
 import Fleet from "./pages/Fleet";
 import Commercial from "./pages/Commercial";
 import Contact from "./pages/Contact";
-
+import GDPRConsent from "../src/components/GDPRBanner"
 function App() {
   return (
     <Router>
       <ScrollToTop />
+      <GDPRConsent />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />

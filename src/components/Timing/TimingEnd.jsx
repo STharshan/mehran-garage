@@ -55,7 +55,7 @@ export default function TimingEnd() {
 
       {/* Why Choose Section */}
       <h2 className="text-xl md:text-2xl font-bold text-center mt-10 text-gray-800 mb-6">
-        Why Choose Mehran Garages?
+        Why Choose Mehran’s Garage?
       </h2>
 
       <div className="max-w-7xl mx-auto mt-10">

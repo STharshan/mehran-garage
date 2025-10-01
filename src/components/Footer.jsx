@@ -96,7 +96,7 @@ const Footer = () => {
 
         {/* Bottom bar */}
         <div className="mt-12 border-t border-gray-300 dark:border-neutral-800 pt-8 text-center text-gray-200 dark:text-gray-400">
-          © {new Date().getFullYear()} Mehran Garages. All rights reserved.
+          © {new Date().getFullYear()} Mehran’s Garage. All rights reserved.
           <span className="mx-1">|</span>
           Powered by{" "}
           <a

@@ -32,7 +32,7 @@ const AboutUs = () => {
                 >
                     <h2 className="text-3xl font-semibold text-blue-600 mb-4">About Us</h2>
                     <p className="text-lg text-gray-200 mb-4">
-                        At Mehran Garages, we are more than just a service — we are a family. As a family-owned business with decades of hands-on experience, we’ve built our reputation on trust, integrity, and a deep commitment to excellence.
+                        At Mehran’s Garage, we are more than just a service — we are a family. As a family-owned business with decades of hands-on experience, we’ve built our reputation on trust, integrity, and a deep commitment to excellence.
                     </p>
                     <p className="text-lg text-gray-200 mb-4">
                         We take immense pride in our craftsmanship and use only best-in-class tools and technology to ensure every job is done right the first time. Whether it’s a simple check-up or a complex repair, we treat your vehicle with the same care and attention as if it were our own.

@@ -2,10 +2,10 @@ import React, { useState, useRef } from "react";
 
 const HOURS = [
   { day: "Monday", time: "9:30 am – 5:30 pm" },
-  { day: "Tuesday", time: "9:30 am – 6:30 pm" },
-  { day: "Wednesday", time: "9:30 am – 6:30 pm" },
-  { day: "Thursday", time: "9:30 am – 6:30 pm" },
-  { day: "Friday", time: "9:30 am – 6:30 pm" },
+  { day: "Tuesday", time: "9:30 am – 5:30 pm" },
+  { day: "Wednesday", time: "9:30 am – 5:30 pm" },
+  { day: "Thursday", time: "9:30 am – 5:30 pm" },
+  { day: "Friday", time: "9:30 am – 5:30 pm" },
   { day: "Saturday", time: "9:30 am – 2:30 pm" },
   { day: "Sunday", time: "Closed" },
 ];
