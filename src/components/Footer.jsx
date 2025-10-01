@@ -77,9 +77,6 @@ const Footer = () => {
                   United Kingdom
                 </a>
               </li>
-
-              <li><Link to="/privacy-policy" className="hover:text-gray-400">Privacy Policy</Link></li>
-              <li><Link to="/terms-conditions" className="hover:text-gray-400">Terms & Conditions</Link></li>
             </ul>
           </div>
 
@@ -95,19 +92,36 @@ const Footer = () => {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-12 border-t border-gray-300 dark:border-neutral-800 pt-8 text-center text-gray-200 dark:text-gray-400">
-          © {new Date().getFullYear()} Mehran Garages. All rights reserved.
-          <span className="mx-1">|</span>
-          Powered by{" "}
-          <a
-            href="https://www.ansely.co.uk/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-bold hover:underline text-white"
-          >
-            Ansely
-          </a>
+        <div className="mt-12 border-t  border-gray-300 dark:border-neutral-800 pt-8">
+          <div className="flex flex-col max-w-6xl mx-auto md:flex-row items-center justify-between text-gray-200 dark:text-gray-400 text-sm">
+
+            {/* Left side */}
+            <div className="text-center md:text-left mb-4 md:mb-0">
+              © {new Date().getFullYear()} Mehran Garages. All rights reserved.
+              <span className="mx-1">|</span>
+              Powered by{" "}
+              <a
+                href="https://www.ansely.co.uk/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-bold hover:underline text-white"
+              >
+                Ansely
+              </a>
+            </div>
+
+            {/* Right side */}
+            <div className="flex gap-4 text-center md:text-right">
+              <Link to="/privacy-policy" className="hover:text-gray-400">
+                Privacy Policy
+              </Link>
+              <Link to="/terms-conditions" className="hover:text-gray-400">
+                Terms & Conditions
+              </Link>
+            </div>
+          </div>
         </div>
+
       </div>
     </footer>
   );
