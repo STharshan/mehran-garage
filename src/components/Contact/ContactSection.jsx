@@ -123,7 +123,7 @@ export default function ContactSection() {
     const encodedMessage = encodeURIComponent(messageText);
 
     // WhatsApp phone number
-    const whatsappNumber = "+447846953888"; // Use the number to which messages are to be sent
+    const whatsappNumber = "+447850953737"; // Use the number to which messages are to be sent
 
     // Construct WhatsApp URL
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
