@@ -112,10 +112,10 @@ export default function ContactSection() {
 
     // Create a WhatsApp message with selected service
     const messageText = `
-      Name: ${name} \n
-      Email: ${email} \n
-      Phone: ${phone} \n
-      Service Requested: ${selectedService} \n
+      Name: ${name} 
+      Email: ${email}
+      Phone: ${phone}
+      Service Requested: ${selectedService}
       Message: ${message}
     `;
 
