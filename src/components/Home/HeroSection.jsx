@@ -69,7 +69,7 @@ const HeroSection = () => {
             </div>
             <div>
               <a
-                href="https://wa.me/447846953888" // Use full international format without + or dashes
+                href="https://wa.me/447850953737" // Use full international format without + or dashes
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block bg-green-600 hover:bg-green-700 text-white py-2 px-3 rounded-md font-semibold sm:text-lg transition-transform hover:-translate-y-0.5 active:scale-95"
