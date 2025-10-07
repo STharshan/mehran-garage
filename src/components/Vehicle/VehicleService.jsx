@@ -26,7 +26,7 @@ export default function VehicleServices() {
       items: [
         "Engine oil",
         "Oil Filter",
-        "Air Filter - worth up to £70"
+        "Air Filter"
       ],
     },
     {
@@ -39,9 +39,9 @@ export default function VehicleServices() {
       items: [
         "Engine oil",
         "Oil Filter",
-        "Air Filter - worth up to £70",
-        "Cabin Filter - worth up to £60",
-        "Brake Fluid - worth up to £49.99"
+        "Air Filter",
+        "Cabin Filter",
+        "Brake Fluid"
       ],
     },
     
