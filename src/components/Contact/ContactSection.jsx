@@ -210,7 +210,7 @@ export default function ContactSection() {
                   className={`w-full border bg-white dark:bg-neutral-900 text-gray-900 dark:text-gray-100 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-600 ${errors.name && touched.name ? "border-blue-600" : "border-gray-300 dark:border-gray-600"}`}
                 />
                 {errors.name && touched.name && (
-                  <p id="name-error" className="mt-1 text-sm text-blue-600">{errors.name}</p>
+                  <p id="name-error" className="mt-1 text-sm text-red-600">{errors.name}</p>
                 )}
               </div>
               <div>
@@ -226,7 +226,7 @@ export default function ContactSection() {
                   title="Enter a valid email like name@example.com"
                   className={`w-full border bg-white dark:bg-neutral-900 text-gray-900 dark:text-gray-100 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-600 ${errors.email && touched.email ? "border-blue-600" : "border-gray-300 dark:border-gray-600"}`}
                 />
-                {errors.email && touched.email && (<p id="email-error" className="mt-1 text-sm text-blue-600">{errors.email}</p>)}
+                {errors.email && touched.email && (<p id="email-error" className="mt-1 text-sm text-red-600">{errors.email}</p>)}
               </div>
               <div>
                 <select
@@ -243,7 +243,7 @@ export default function ContactSection() {
                   ))}
                 </select>
                 {errors.service && touched.service && (
-                  <p id="service-error" className="mt-1 text-sm text-blue-600">{errors.service}</p>
+                  <p id="service-error" className="mt-1 text-sm text-red-600">{errors.service}</p>
                 )}
               </div>
 
@@ -261,7 +261,7 @@ export default function ContactSection() {
                   className={`w-full border bg-white dark:bg-neutral-900 text-gray-900 dark:text-gray-100 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-600 ${errors.phone && touched.phone ? "border-blue-600" : "border-gray-300 dark:border-gray-600"}`}
                 />
                 {errors.phone && touched.phone && (
-                  <p id="phone-error" className="mt-1 text-sm text-blue-600">{errors.phone}</p>
+                  <p id="phone-error" className="mt-1 text-sm text-red-600">{errors.phone}</p>
                 )}
               </div>
 
@@ -277,7 +277,7 @@ export default function ContactSection() {
                   className={`w-full border bg-white dark:bg-neutral-900 text-gray-900 dark:text-gray-100 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-600 ${errors.message && touched.message ? "border-blue-600" : "border-gray-300 dark:border-gray-600"}`}
                 />
                 {errors.message && touched.message && (
-                  <p id="message-error" className="mt-1 text-sm text-blue-600">{errors.message}</p>
+                  <p id="message-error" className="mt-1 text-sm text-red-600">{errors.message}</p>
                 )}
               </div>
 
