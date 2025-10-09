@@ -11,7 +11,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="max-w-sm mx-auto">
             <img src="/mehran-logo.png" alt="SL Smart Repair logo" className="block" />
-            <p className="text-gray-200 -mt-15 dark:text-gray-300 leading-relaxed text-center">
+            <p className="text-gray-200 -mt-16 sm:-mt-10 md:-mt-8 dark:text-gray-300 leading-relaxed text-center">
               Professional automotive repair services that restore your vehicle to perfect condition.
             </p>
 
