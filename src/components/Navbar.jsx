@@ -36,13 +36,13 @@ const Navbar = () => {
       <div className="flex items-center justify-between max-w-screen-xl mx-auto px-4 sm:px-6">
         {/* Logo */}
         <img
-          src="/mehran-logo.png" // Logo image source (replace with your actual path or URL)
+          src="/logo.png" // Logo image source (replace with your actual path or URL)
           alt="Logo"
-          className="h-25 w-30" // Adjust the height and width of the logo for responsiveness
+          className="h-25 w-40" // Adjust the height and width of the logo for responsiveness
         />
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex space-x-8 text-white items-center relative">
+        <div className="hidden lg:flex space-x-8 text-white items-center relative">
           <Link to="/" className="hover:text-gray-300 text-lg">
             Home
           </Link>
@@ -77,7 +77,7 @@ const Navbar = () => {
         </div>
 
         {/* Contact on desktop */}
-        <div className="hidden md:flex items-center space-x-4">
+        <div className="hidden lg:flex items-center space-x-4">
           <span className="text-white">Call Us Today</span>
           <a
             href="tel:+447846953888"
@@ -88,7 +88,7 @@ const Navbar = () => {
         </div>
 
         {/* Mobile menu icon */}
-        <div className="md:hidden flex items-center">
+        <div className="lg:hidden flex items-center">
           <button onClick={toggleMenu} className="text-white text-2xl">
             {isMobileMenuOpen ? <FaTimes className="h-6 w-6" /> : <FaBars className="h-6 w-6" />}
           </button>
@@ -97,7 +97,7 @@ const Navbar = () => {
 
       {/* Mobile Menu Dropdown */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-blue-700 text-white p-4">
+        <div className="lg:hidden bg-blue-700 text-white p-4">
           <Link to="/" className="hover:text-gray-300 text-lg">
             Home
           </Link>
