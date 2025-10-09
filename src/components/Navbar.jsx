@@ -38,7 +38,7 @@ const Navbar = () => {
         <img
           src="/logo.png"
           alt="Logo"
-          className="h-16 w-24 sm:h-16 sm:w-32 md:h-20 md:w-36 lg:h-24 lg:w-40"
+          className="h-25 w-25 sm:h-20 sm:w-32 md:h-25 md:w-36 lg:h-30 lg:w-40"
         />
 
         {/* Desktop Menu */}
