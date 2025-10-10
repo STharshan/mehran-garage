@@ -25,7 +25,7 @@ export default function MotEnd() {
   ];
 
   return (
-    <section className="py-16 px-4">
+    <section className="py-8 px-4">
       <div className="max-w-7xl mx-auto bg-blue-100 rounded-xl shadow-md p-8 md:p-12">
         <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-10">
           Why Choose Mehran’s Garage for MOT?

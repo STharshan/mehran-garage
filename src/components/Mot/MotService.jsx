@@ -61,7 +61,7 @@ const MOTCard = ({ title, description, items, icon: Icon }) => (
 
 export default function MOTServices() {
   return (
-    <section className="py-20 px-6">
+    <section className="py-10 px-6">
       <div className="max-w-7xl mx-auto text-center">
         {/* Title */}
         <h2 className="text-4xl font-extrabold text-black mb-10">
