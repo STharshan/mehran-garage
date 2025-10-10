@@ -66,7 +66,7 @@ const Footer = () => {
               <li>
                 Address:{" "}
                 <a
-                  href="https://www.google.com/maps?q=29+Church+St,+Old+Basford,+Nottingham+NG6+0GA+United+Kingdom"
+                  href="https://maps.app.goo.gl/d9dqa5CSawPFofzKA"
                   className="cursor-pointer hover:text-gray-400"
                   target="_blank"
                   rel="noopener noreferrer"

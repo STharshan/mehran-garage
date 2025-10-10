@@ -142,8 +142,8 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="bg-black py-12 px-4 transition-colors duration-300 mt-24">
-      <div className="max-w-6xl mx-auto">
+    <section id="contact" className="bg-black py-12 px-4 transition-colors duration-300 ">
+      <div className="max-w-6xl mx-auto mt-24">
         <h2 data-aos="fade-up" className="text-center text-2xl md:text-3xl font-bold text-blue-600">
           Ready to Get Your Car Fixed?
         </h2>
@@ -159,7 +159,7 @@ export default function ContactSection() {
             </h3>
             <div className="mt-4 space-y-6 text-gray-600 dark:text-gray-300">
               <div>
-                <a  href="https://www.google.com/maps?q=29+Church+St,+Old+Basford,+Nottingham+NG6+0GA+United+Kingdom">
+                <a  href="https://maps.app.goo.gl/d9dqa5CSawPFofzKA" target="_blank">
                   <p className="font-medium dark:text-gray-200">Address</p>
                   <address className="not-italic hover:underline">
                     29 Church St, Old Basford

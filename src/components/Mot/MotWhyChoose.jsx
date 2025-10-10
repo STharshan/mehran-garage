@@ -22,7 +22,7 @@ export default function MotWhyChooseUs() {
 
   return (
     <div className="py-16 px-4 text-center">
-      <h2 className="text-3xl text-black-600 font-bold mb-12">Why Choose Us?</h2>
+      <h2 className="text-3xl mt-2 text-black-600 font-bold mb-12">Why Choose Us?</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
         {features.map((feature, index) => (
           <div
