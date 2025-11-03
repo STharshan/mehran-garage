@@ -7,7 +7,7 @@ export default function DiagnosticsEnd() {
         <h2 className="text-xl md:text-2xl text-center font-bold text-gray-900">
           Why Choose Our Diagnostics?
         </h2>
-      <div className="max-w-7xl mx-auto mt-5 p-8 rounded-xl bg-gradient-to-r from-blue-100 to-white text-center">
+      <div className="max-w-7xl mx-auto mt-5 p-8 rounded-xl bg-linear-to-r from-blue-100 to-white text-center">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-sm md:text-base">
           <div>
             <h3 className="text-blue-700 font-semibold mb-2">Dealer Level Access</h3>

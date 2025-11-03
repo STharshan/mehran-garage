@@ -17,7 +17,7 @@ const CallToAction = () => {
   };
 
   return (
-    <section id="contact" className="bg-gradient-to-r from-blue-800 to-gray-900 text-white py-16 px-4 sm:px-6 lg:px-16">
+    <section id="contact" className="bg-linear-to-r from-blue-800 to-gray-900 text-white py-16 px-4 sm:px-6 lg:px-16">
       <div className="max-w-3xl mx-auto text-center">
         <h2 className="text-4xl font-bold mb-4 mt-20">
           Commercial Van Repair

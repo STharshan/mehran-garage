@@ -58,7 +58,7 @@ export default function BrakeEnd() {
       <div className="max-w-5xl mx-auto ">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 text-sm md:text-base ">
           {/* Regular Checks */}
-          <div className='rounded-xl shadow-md p-6 bg-gradient-to-r from-blue-100 to-blue-100   hover:scale-105 active:scale-105 
+          <div className='rounded-xl shadow-md p-6 bg-linear-to-r from-blue-100 to-blue-100   hover:scale-105 active:scale-105 
                      hover:shadow-[0_0_25px_5px_rgba(0,123,255,0.4)] duration-300'>
             <h3 className="text-blue-700 font-semibold mb-3 text-center">Regular Checks</h3>
             <ul className="list-disc list-inside space-y-2 text-gray-700">
@@ -70,7 +70,7 @@ export default function BrakeEnd() {
           </div>
 
           {/* Driving Tips */}
-          <div className='rounded-xl shadow-md p-6 bg-gradient-to-r from-blue-100 to-blue-100   hover:scale-105 active:scale-105'>
+          <div className='rounded-xl shadow-md p-6 bg-linear-to-r from-blue-100 to-blue-100   hover:scale-105 active:scale-105'>
             <h3 className="text-blue-600 font-semibold mb-3 text-center">Driving Tips</h3>
             <ul className="list-disc list-inside space-y-2 text-gray-700">
               <li>Avoid harsh braking when possible</li>
